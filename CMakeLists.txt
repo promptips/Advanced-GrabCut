@@ -5,4 +5,5 @@ SET(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 add_subdirectory(CMakeHelpers)
 
-# Compile wi
+# Compile with c++11 functionality.
+if
