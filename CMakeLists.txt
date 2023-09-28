@@ -7,4 +7,4 @@ add_subdirectory(CMakeHelpers)
 
 # Compile with c++11 functionality.
 if(UNIX)
-  SET(CMAKE_CXX_
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -
