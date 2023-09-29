@@ -11,4 +11,4 @@ if(UNIX)
 endif(UNIX)
 
 #### Eigen ####
-# Tell CMake to also look in the s
+# Tell CMake to also look in the source directory to find some .cmake 
