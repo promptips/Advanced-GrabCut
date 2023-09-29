@@ -12,4 +12,6 @@ endif(UNIX)
 
 #### Eigen ####
 # Tell CMake to also look in the source directory to find some .cmake files
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_MODULE_PATH})
+
+# 
