@@ -15,4 +15,4 @@ endif(UNIX)
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_MODULE_PATH})
 
 # Set the CMake variable to the value of the environment variable.
-# If the build is a
+# If the build is absolutely fresh, this will
