@@ -14,4 +14,5 @@ endif(UNIX)
 # Tell CMake to also look in the source directory to find some .cmake files
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_MODULE_PATH})
 
-# Set the CMake variable to the value of the environment v
+# Set the CMake variable to the value of the environment variable.
+# If the build is a
