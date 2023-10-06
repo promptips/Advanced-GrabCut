@@ -24,4 +24,4 @@ else()
 endif()
 
 if(NOT EIGEN3_FOUND)
-  FIN
+  FIND_PACKAGE(Eigen3 REQUIRED) #
