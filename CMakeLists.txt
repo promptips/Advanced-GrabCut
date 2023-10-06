@@ -18,4 +18,4 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_MODULE_PATH})
 # If the build is absolutely fresh, this will be the case if the CMake variable EIGEN3_INCLUDE_DIR is not set.
 if(NOT EIGEN3_INCLUDE_DIR)
   set(EIGEN3_INCLUDE_DIR $ENV{EIGEN3_INCLUDE_DIR})
-  message("Set EIGEN3_INCLUDE
+  message("Set EIGEN3_INCLUDE_DIR to ${EIGEN3_INCLUDE_D
