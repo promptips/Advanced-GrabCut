@@ -21,4 +21,7 @@ if(NOT EIGEN3_INCLUDE_DIR)
   message("Set EIGEN3_INCLUDE_DIR to ${EIGEN3_INCLUDE_DIR} from environment variable of the same name.")
 else()
   message("EIGEN3_INCLUDE_DIR is ${EIGEN3_INCLUDE_DIR}")
-endif
+endif()
+
+if(NOT EIGEN3_FOUND)
+  FIN
