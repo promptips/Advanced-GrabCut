@@ -24,4 +24,4 @@ else()
 endif()
 
 if(NOT EIGEN3_FOUND)
-  FIND_PACKAGE(Eigen3 REQUIRED) #
+  FIND_PACKAGE(Eigen3 REQUIRED) #requires FindEigen3.cma
