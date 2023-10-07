@@ -24,4 +24,5 @@ else()
 endif()
 
 if(NOT EIGEN3_FOUND)
-  FIND_PACKAGE(Eigen3 REQUIRED) #requires FindEigen3.cmake to be in the source dire
+  FIND_PACKAGE(Eigen3 REQUIRED) #requires FindEigen3.cmake to be in the source directory
+  include_directories(${EI
