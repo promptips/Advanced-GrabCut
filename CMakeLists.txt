@@ -31,4 +31,4 @@ endif()
 # ITK
 FIND_PACKAGE(ITK REQUIRED ITKCommon ITKIOImageBase ITKIOPNG ITKIOMeta
                           ITKImageIntensity ITKImageFeature
-                  
+                          ITKMathematicalMorph
