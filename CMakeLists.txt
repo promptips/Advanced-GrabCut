@@ -36,4 +36,5 @@ FIND_PACKAGE(ITK REQUIRED ITKCommon ITKIOImageBase ITKIOPNG ITKIOMeta
                           ITKTestKernel)
 INCLUDE( ${ITK_USE_FILE} )
 
-if( "${ITK_VERSI
+if( "${ITK_VERSION_MAJOR}" LESS 4 )
+  MESSAGE(FA
