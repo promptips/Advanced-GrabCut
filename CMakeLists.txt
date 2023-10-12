@@ -34,4 +34,6 @@ FIND_PACKAGE(ITK REQUIRED ITKCommon ITKIOImageBase ITKIOPNG ITKIOMeta
                           ITKMathematicalMorphology
                           ITKBinaryMathematicalMorphology ITKDistanceMap
                           ITKTestKernel)
-INCLUDE( $
+INCLUDE( ${ITK_USE_FILE} )
+
+if( "${ITK_VERSI
