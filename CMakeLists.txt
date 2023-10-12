@@ -32,4 +32,5 @@ endif()
 FIND_PACKAGE(ITK REQUIRED ITKCommon ITKIOImageBase ITKIOPNG ITKIOMeta
                           ITKImageIntensity ITKImageFeature
                           ITKMathematicalMorphology
-                          ITKBinaryMathematicalMorphology ITKDi
+                          ITKBinaryMathematicalMorphology ITKDistanceMap
+           
