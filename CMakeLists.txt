@@ -38,4 +38,6 @@ INCLUDE( ${ITK_USE_FILE} )
 
 if( "${ITK_VERSION_MAJOR}" LESS 4 )
   MESSAGE(FATAL_ERROR "You must build GrabCut with ITK >= 4.0!")
-endif( "${ITK_VERS
+endif( "${ITK_VERSION_MAJOR}" LESS 4 )
+
+#
