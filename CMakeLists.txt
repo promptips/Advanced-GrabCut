@@ -40,4 +40,5 @@ if( "${ITK_VERSION_MAJOR}" LESS 4 )
   MESSAGE(FATAL_ERROR "You must build GrabCut with ITK >= 4.0!")
 endif( "${ITK_VERSION_MAJOR}" LESS 4 )
 
-# Boost (I'm not sure why this is necessary here since it is in ImageGraphCutSegmentation/CMakeLists.txt, 
+# Boost (I'm not sure why this is necessary here since it is in ImageGraphCutSegmentation/CMakeLists.txt, but it seems to be.
+set(Boost_USE_MUL
