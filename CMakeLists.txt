@@ -40,4 +40,4 @@ if( "${ITK_VERSION_MAJOR}" LESS 4 )
   MESSAGE(FATAL_ERROR "You must build GrabCut with ITK >= 4.0!")
 endif( "${ITK_VERSION_MAJOR}" LESS 4 )
 
-# Boost (I'm not sure why this is necessary here since i
+# Boost (I'm not sure why this is necessary here since it is in ImageGraphCutS
