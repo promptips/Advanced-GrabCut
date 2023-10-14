@@ -42,4 +42,5 @@ endif( "${ITK_VERSION_MAJOR}" LESS 4 )
 
 # Boost (I'm not sure why this is necessary here since it is in ImageGraphCutSegmentation/CMakeLists.txt, but it seems to be.
 set(Boost_USE_MULTITHREADED ON)
-FIND_PACKAGE(
+FIND_PACKAGE(Boost 1.50)
+INCLUDE_DIRECTORI
