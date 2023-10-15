@@ -45,4 +45,5 @@ set(Boost_USE_MULTITHREADED ON)
 FIND_PACKAGE(Boost 1.50)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
-# Submo
+# Submodules
+UseSubmodule(ImageGraphC
