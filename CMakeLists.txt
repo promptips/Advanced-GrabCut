@@ -47,4 +47,6 @@ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
 # Submodules
 UseSubmodule(ImageGraphCutSegmentation GrabCut)
-UseSubmodule(ExpectationMaximization Gr
+UseSubmodule(ExpectationMaximization GrabCut)
+
+# Make the h/hpp files ap
