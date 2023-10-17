@@ -46,4 +46,5 @@ FIND_PACKAGE(Boost 1.50)
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
 # Submodules
-UseSubmodule(ImageGraphC
+UseSubmodule(ImageGraphCutSegmentation GrabCut)
+UseSubmo
