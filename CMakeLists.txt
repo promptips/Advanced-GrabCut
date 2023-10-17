@@ -47,4 +47,4 @@ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
 # Submodules
 UseSubmodule(ImageGraphCutSegmentation GrabCut)
-UseSubmo
+UseSubmodule(ExpectationMaximization Gr
