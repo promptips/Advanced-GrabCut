@@ -53,4 +53,4 @@ UseSubmodule(ExpectationMaximization GrabCut)
 add_custom_target(GrabCut SOURCES
 GrabCut.h GrabCut.hpp README.md)
 
-ADD_EXECUTABLE
+ADD_EXECUTABLE(GrabCutExample GrabCutExamp
