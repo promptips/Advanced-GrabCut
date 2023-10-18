@@ -54,4 +54,4 @@ add_custom_target(GrabCut SOURCES
 GrabCut.h GrabCut.hpp README.md)
 
 ADD_EXECUTABLE(GrabCutExample GrabCutExample.cpp)
-TARGET_LINK_LIBRARIES(GrabCutE
+TARGET_LINK_LIBRARIES(GrabCutExample KMeansClustering libExpecta
