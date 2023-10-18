@@ -49,4 +49,5 @@ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 UseSubmodule(ImageGraphCutSegmentation GrabCut)
 UseSubmodule(ExpectationMaximization GrabCut)
 
-# Make the h/hpp files ap
+# Make the h/hpp files appear in a QtCreator project
+ad
