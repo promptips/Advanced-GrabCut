@@ -50,4 +50,5 @@ UseSubmodule(ImageGraphCutSegmentation GrabCut)
 UseSubmodule(ExpectationMaximization GrabCut)
 
 # Make the h/hpp files appear in a QtCreator project
-add_custom_target(GrabCut S
+add_custom_target(GrabCut SOURCES
+GrabCut.h GrabCut.h
