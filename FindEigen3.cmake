@@ -7,4 +7,5 @@
 # Once done this will define
 #
 #  EIGEN3_FOUND - system has eigen lib with correct version
-#  EIGEN3_INCLUDE_DIR - the eigen includ
+#  EIGEN3_INCLUDE_DIR - the eigen include directory
+#  EIGEN3_VERSION - eige
