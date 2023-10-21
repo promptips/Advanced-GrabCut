@@ -6,4 +6,5 @@
 #
 # Once done this will define
 #
-#  EIGEN3_FOUND - system has eigen
+#  EIGEN3_FOUND - system has eigen lib with correct version
+#  EIGEN3_I
