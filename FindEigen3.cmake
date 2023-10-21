@@ -6,4 +6,4 @@
 #
 # Once done this will define
 #
-#  EIG
+#  EIGEN3_FOUND - system has eigen
