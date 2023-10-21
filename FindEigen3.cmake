@@ -4,4 +4,6 @@
 #   find_package(Eigen3 3.1.2)
 # to require version 3.1.2 or newer of Eigen3.
 #
+# Once done this will define
 #
+#  EIG
