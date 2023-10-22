@@ -10,4 +10,4 @@
 #  EIGEN3_INCLUDE_DIR - the eigen include directory
 #  EIGEN3_VERSION - eigen version
 
-# Copyright (c) 2006, 2
+# Copyright (c) 2006, 2007 Montel Laurent, <mont
