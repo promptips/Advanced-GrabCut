@@ -12,4 +12,5 @@
 
 # Copyright (c) 2006, 2007 Montel Laurent, <montel@kde.org>
 # Copyright (c) 2008, 2009 Gael Guennebaud, <g.gael@free.fr>
-# Copyright (c) 2009 Benoit Jacob <jacob.benoit.1@gmai
+# Copyright (c) 2009 Benoit Jacob <jacob.benoit.1@gmail.com>
+# Redistribution and use is a
