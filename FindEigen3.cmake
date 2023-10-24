@@ -16,4 +16,5 @@
 # Redistribution and use is allowed according to the terms of the 2-clause BSD license.
 
 if(NOT Eigen3_FIND_VERSION)
-  if(NO
+  if(NOT Eigen3_FIND_VERSION_MAJOR)
+    set
