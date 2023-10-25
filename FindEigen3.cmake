@@ -17,4 +17,4 @@
 
 if(NOT Eigen3_FIND_VERSION)
   if(NOT Eigen3_FIND_VERSION_MAJOR)
-    set
+    set(Eigen3_FIND_VERSION_MAJOR
