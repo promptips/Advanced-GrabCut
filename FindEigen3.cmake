@@ -23,4 +23,5 @@ if(NOT Eigen3_FIND_VERSION)
     set(Eigen3_FIND_VERSION_MINOR 91)
   endif(NOT Eigen3_FIND_VERSION_MINOR)
   if(NOT Eigen3_FIND_VERSION_PATCH)
-    set(Eigen3_FIND_VERS
+    set(Eigen3_FIND_VERSION_PATCH 0)
+  endif(NOT Eig
