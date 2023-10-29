@@ -26,4 +26,4 @@ if(NOT Eigen3_FIND_VERSION)
     set(Eigen3_FIND_VERSION_PATCH 0)
   endif(NOT Eigen3_FIND_VERSION_PATCH)
 
-  se
+  set(Eigen3_FIND_VERSION "${Eig
