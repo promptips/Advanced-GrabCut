@@ -27,4 +27,6 @@ if(NOT Eigen3_FIND_VERSION)
   endif(NOT Eigen3_FIND_VERSION_PATCH)
 
   set(Eigen3_FIND_VERSION "${Eigen3_FIND_VERSION_MAJOR}.${Eigen3_FIND_VERSION_MINOR}.${Eigen3_FIND_VERSION_PATCH}")
-endif(
+endif(NOT Eigen3_FIND_VERSION)
+
+macro(
