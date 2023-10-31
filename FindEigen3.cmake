@@ -32,4 +32,4 @@ endif(NOT Eigen3_FIND_VERSION)
 macro(_eigen3_check_version)
   file(READ "${EIGEN3_INCLUDE_DIR}/Eigen/src/Core/util/Macros.h" _eigen3_version_header)
 
-  string(REGEX MATCH "define[ \t]+EIGEN_WORLD_VERSION[
+  string(REGEX MATCH "define[ \t]+EIGEN_WORLD_VERSION[ \t]+([0-9]+)" _eigen3_
