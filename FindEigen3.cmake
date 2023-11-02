@@ -35,4 +35,5 @@ macro(_eigen3_check_version)
   string(REGEX MATCH "define[ \t]+EIGEN_WORLD_VERSION[ \t]+([0-9]+)" _eigen3_world_version_match "${_eigen3_version_header}")
   set(EIGEN3_WORLD_VERSION "${CMAKE_MATCH_1}")
   string(REGEX MATCH "define[ \t]+EIGEN_MAJOR_VERSION[ \t]+([0-9]+)" _eigen3_major_version_match "${_eigen3_version_header}")
-  set(EIGEN3_MAJOR_VERSIO
+  set(EIGEN3_MAJOR_VERSION "${CMAKE_MATCH_1}")
+  string(RE
