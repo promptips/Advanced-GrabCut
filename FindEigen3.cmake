@@ -39,4 +39,4 @@ macro(_eigen3_check_version)
   string(REGEX MATCH "define[ \t]+EIGEN_MINOR_VERSION[ \t]+([0-9]+)" _eigen3_minor_version_match "${_eigen3_version_header}")
   set(EIGEN3_MINOR_VERSION "${CMAKE_MATCH_1}")
 
-  se
+  set(EIGEN3_VERSION ${EIGEN3_WOR
