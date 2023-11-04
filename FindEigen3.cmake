@@ -43,4 +43,5 @@ macro(_eigen3_check_version)
   if(${EIGEN3_VERSION} VERSION_LESS ${Eigen3_FIND_VERSION})
     set(EIGEN3_VERSION_OK FALSE)
   else(${EIGEN3_VERSION} VERSION_LESS ${Eigen3_FIND_VERSION})
-    s
+    set(EIGEN3_VERSION_OK TRUE)
+  
