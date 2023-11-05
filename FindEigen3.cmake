@@ -48,4 +48,4 @@ macro(_eigen3_check_version)
 
   if(NOT EIGEN3_VERSION_OK)
 
-    message(ST
+    message(STATUS "Eigen3 version ${EI
