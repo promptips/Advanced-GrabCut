@@ -48,4 +48,5 @@ macro(_eigen3_check_version)
 
   if(NOT EIGEN3_VERSION_OK)
 
-    message(STATUS "Eigen3 version ${EIGEN3_VERSION} found in ${EIGE
+    message(STATUS "Eigen3 version ${EIGEN3_VERSION} found in ${EIGEN3_INCLUDE_DIR}, "
+          
