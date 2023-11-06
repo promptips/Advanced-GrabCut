@@ -59,4 +59,6 @@ if (EIGEN3_INCLUDE_DIR)
   _eigen3_check_version()
   set(EIGEN3_FOUND ${EIGEN3_VERSION_OK})
 
-else (EI
+else (EIGEN3_INCLUDE_DIR)
+
+  find_path(EIG
