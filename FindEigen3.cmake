@@ -61,4 +61,4 @@ if (EIGEN3_INCLUDE_DIR)
 
 else (EIGEN3_INCLUDE_DIR)
 
-  find_path(EIG
+  find_path(EIGEN3_INCLUDE_DIR NAMES si
