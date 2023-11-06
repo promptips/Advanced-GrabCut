@@ -55,4 +55,5 @@ endmacro(_eigen3_check_version)
 
 if (EIGEN3_INCLUDE_DIR)
 
-  # 
+  # in cache already
+  _eig
