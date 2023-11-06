@@ -51,4 +51,8 @@ macro(_eigen3_check_version)
     message(STATUS "Eigen3 version ${EIGEN3_VERSION} found in ${EIGEN3_INCLUDE_DIR}, "
                    "but at least version ${Eigen3_FIND_VERSION} is required")
   endif(NOT EIGEN3_VERSION_OK)
-endmacro(_eigen3_check_versi
+endmacro(_eigen3_check_version)
+
+if (EIGEN3_INCLUDE_DIR)
+
+  # 
