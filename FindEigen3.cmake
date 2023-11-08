@@ -67,3 +67,6 @@ else (EIGEN3_INCLUDE_DIR)
       ${KDE4_INCLUDE_DIR}
       PATH_SUFFIXES eigen3 eigen
     )
+
+  if(EIGEN3_INCLUDE_DIR)
+   
