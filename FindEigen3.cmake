@@ -73,4 +73,4 @@ else (EIGEN3_INCLUDE_DIR)
   endif(EIGEN3_INCLUDE_DIR)
 
   include(FindPackageHandleStandardArgs)
-  find_package
+  find_package_handle_standard_args(Eigen
