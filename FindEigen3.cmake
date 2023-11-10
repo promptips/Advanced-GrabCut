@@ -72,4 +72,5 @@ else (EIGEN3_INCLUDE_DIR)
     _eigen3_check_version()
   endif(EIGEN3_INCLUDE_DIR)
 
-  include(FindPackageHandleStan
+  include(FindPackageHandleStandardArgs)
+  find_package
