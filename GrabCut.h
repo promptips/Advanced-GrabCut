@@ -20,3 +20,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define GrabCut_H
 
 // Submodules
+#include "Mask/ForegroundBackgroundSegmentMask.h"
+#include "ImageGraphCutSegmentation/ImageGraphCut.h"
+
+// ITK
+#include "itkImage.h"
+
+// STL
+#include <vector>
+
+// Eigen
+#include <Eigen/Dense>
+
+#include "ExpectationMaximization/MixtureModel.h"
+
+/** Perform GrabCut segmentation on an image.  */
+template <typename TImage>
+class GrabCut
+{
+public:
+    // Typedefs
+    typedef typename TImage::PixelType PixelType;
+
+    /** Constructor */
+    GrabCut();
+
+    /** The type of a list of pixels/indexes. */
+    typedef std::vector<itk::Index<2> > IndexContainer;
