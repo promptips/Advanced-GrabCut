@@ -109,3 +109,20 @@ protected:
 
     /** The mixture model for the background. */
     MixtureModel BackgroundModels;
+
+    /** The number of EM iterations to run for each GrabCut iteration. */
+    unsigned int NumberOfEMIterations = 5;
+
+    unsigned int GetDimensionality()
+    {
+        if(this->Image)
+        {
+            return TImage::PixelType::Dimension;
+        }
+        return 0;
+    }
+};
+
+#include "GrabCut.hpp"
+
+#endif
