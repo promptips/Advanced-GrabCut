@@ -79,3 +79,33 @@ public:
     }
 
 protected:
+
+    /** Create random models and add them to the mixture models.*/
+    void InitializeModels(const unsigned int numberOfModels);
+
+    /** Construct a data matrix from a selection of pixel indices. Every pixel is a column in the matrix. */
+    Eigen::MatrixXd CreateMatrixFromPixels(const std::vector<typename TImage::PixelType>& pixels);
+
+    /** Perform EM on a collection of pixels according to a mixture model. */
+    MixtureModel ClusterPixels(const std::vector<typename TImage::PixelType>& pixels, const MixtureModel& mixtureModel);
+
+    /** Compute the GMMs for both the foreground pixels and background pixels. */
+    void ClusterForegroundAndBackground();
+
+    /** Do one iteration of the GrabCut algorithm. */
+    void PerformIteration();
+
+    /** The segmentation mask. */
+    ForegroundBackgroundSegmentMask::Pointer SegmentationMask;
+
+    /** The input mask. */
+    ForegroundBackgroundSegmentMask::Pointer InitialMask;
+
+    /** The image to be segmented. */
+    typename TImage::Pointer Image;
+
+    /** The mixture model for the foreground. */
+    MixtureModel ForegroundModels;
+
+    /** The mixture model for the background. */
+    MixtureModel BackgroundModels;
