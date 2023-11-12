@@ -47,3 +47,35 @@ public:
 
     /** The type of a list of pixels/indexes. */
     typedef std::vector<itk::Index<2> > IndexContainer;
+
+    /** Provide the image to segment. */
+    void SetImage(TImage* const image);
+
+    /** Provide the image to segment. */
+    void SetInitialMask(ForegroundBackgroundSegmentMask* const mask);
+
+    /** Get the image that we are segmenting. */
+    TImage* GetImage();
+
+    /** Do the GrabCut segmentation (The main driver function). */
+    void PerformSegmentation();
+
+    /** Get the current/final segmentation mask. */
+    ForegroundBackgroundSegmentMask* GetSegmentationMask();
+
+    /** Get the resulting segmented image (the foreground pixels, with background pixels zeroed). */
+    void GetSegmentedImage(TImage* result);
+
+    /** Compute the likelihood that a pixel belongs to the foreground mixture model. */
+    float ForegroundLikelihood(const typename TImage::PixelType& pixel);
+
+    /** Compute the likelihood that a pixel belongs to the background mixture model. */
+    float BackgroundLikelihood(const typename TImage::PixelType& pixel);
+
+    /** Specify how many EM iterations to run during each GrabCut iteration. */
+    void SetNumberOfEMIterations(const unsigned int numberOfEMIterations)
+    {
+        this->NumberOfEMIterations = numberOfEMIterations;
+    }
+
+protected:
