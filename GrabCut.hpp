@@ -1,4 +1,4 @@
 /*
 Copyright (C) 2012 David Doria, daviddoria@gmail.com
 
-This program is free softwa
+This program is free software: you can redistribute it and
