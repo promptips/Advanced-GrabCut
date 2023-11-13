@@ -1,2 +1,2 @@
 /*
-Copyright (C) 2012 D
+Copyright (C) 2012 David Doria, daviddoria@gmail.c
