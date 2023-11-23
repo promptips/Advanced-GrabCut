@@ -21,4 +21,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "GrabCut.h"
 
 // Submodules
-#include "Helpe
+#include "Helpers/Helpers.h"
+#include "ITKHelp
