@@ -24,4 +24,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "Helpers/Helpers.h"
 #include "ITKHelpers/ITKHelpers.h"
 
-#include "ExpectationMaximization/Expecta
+#include "ExpectationMaximization/ExpectationMaximization.h"
+#includ
