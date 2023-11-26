@@ -30,4 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // ITK
 #include "itkImageRegionIterator.h"
 #include "itkShapedNeighborhoodIterator.h"
-#include "itkM
+#include "itkMaskImageFilter.h"
+
+// STL
+#inclu
