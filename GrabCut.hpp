@@ -29,4 +29,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // ITK
 #include "itkImageRegionIterator.h"
-#include "itkShapedNeighborhoo
+#include "itkShapedNeighborhoodIterator.h"
+#include "itkM
