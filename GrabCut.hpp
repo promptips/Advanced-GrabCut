@@ -25,4 +25,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ITKHelpers/ITKHelpers.h"
 
 #include "ExpectationMaximization/ExpectationMaximization.h"
-#includ
+#include "ExpectationMaximization/Gaus
