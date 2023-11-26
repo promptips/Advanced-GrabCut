@@ -25,4 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "ITKHelpers/ITKHelpers.h"
 
 #include "ExpectationMaximization/ExpectationMaximization.h"
-#include "ExpectationMaximization/Gaus
+#include "ExpectationMaximization/GaussianModel.h"
+
+// ITK
+#inclu
