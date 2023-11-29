@@ -37,4 +37,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <sstream>
 
 // Boost
-#include <boost/graph/boykov_kolmogorov_max_
+#include <boost/graph/boykov_kolmogorov_max_flow.hpp>
+
+template <typenam
