@@ -39,4 +39,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Boost
 #include <boost/graph/boykov_kolmogorov_max_flow.hpp>
 
-template <typenam
+template <typename TImage>
+GrabCut<TImage>::Gr
