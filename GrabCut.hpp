@@ -40,4 +40,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <boost/graph/boykov_kolmogorov_max_flow.hpp>
 
 template <typename TImage>
-GrabCut<TImage>::Gr
+GrabCut<TImage>::GrabCut()
+{
+    this->Ima
