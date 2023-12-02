@@ -43,4 +43,4 @@ template <typename TImage>
 GrabCut<TImage>::GrabCut()
 {
     this->Image = TImage::New();
-    this
+    this->InitialMask = ForegroundBac
