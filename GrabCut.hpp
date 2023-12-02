@@ -44,4 +44,4 @@ GrabCut<TImage>::GrabCut()
 {
     this->Image = TImage::New();
     this->InitialMask = ForegroundBackgroundSegmentMask::New();
-    this->S
+    this->SegmentationMask = Foreground
