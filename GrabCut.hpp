@@ -42,4 +42,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 template <typename TImage>
 GrabCut<TImage>::GrabCut()
 {
-    this->Ima
+    this->Image = TImage::New();
+    this
