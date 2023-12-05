@@ -47,4 +47,5 @@ GrabCut<TImage>::GrabCut()
     this->SegmentationMask = ForegroundBackgroundSegmentMask::New();
 }
 
-template <typename TIma
+template <typename TImage>
+void GrabCut<TImage>::Set
