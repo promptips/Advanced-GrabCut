@@ -48,4 +48,6 @@ GrabCut<TImage>::GrabCut()
 }
 
 template <typename TImage>
-void GrabCut<TImage>::Set
+void GrabCut<TImage>::SetImage(TImage* const image)
+{
+   
