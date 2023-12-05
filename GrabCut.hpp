@@ -50,4 +50,7 @@ GrabCut<TImage>::GrabCut()
 template <typename TImage>
 void GrabCut<TImage>::SetImage(TImage* const image)
 {
-   
+    ITKHelpers::DeepCopy(image, this->Image.GetPointer());
+}
+
+temp
