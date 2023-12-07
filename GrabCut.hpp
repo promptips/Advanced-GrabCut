@@ -54,4 +54,4 @@ void GrabCut<TImage>::SetImage(TImage* const image)
 }
 
 template <typename TImage>
-void GrabCut<TImage>::SetInitialMask(For
+void GrabCut<TImage>::SetInitialMask(ForegroundBackgroundS
