@@ -57,4 +57,6 @@ template <typename TImage>
 void GrabCut<TImage>::SetInitialMask(ForegroundBackgroundSegmentMask* const mask)
 {
     // Save the initial mask
-    ITKHelpers::DeepCopy(mask, this->InitialMask.
+    ITKHelpers::DeepCopy(mask, this->InitialMask.GetPointer());
+
+    // 
