@@ -63,4 +63,5 @@ void GrabCut<TImage>::SetInitialMask(ForegroundBackgroundSegmentMask* const mask
     ITKHelpers::DeepCopy(mask, this->SegmentationMask.GetPointer());
 }
 
-template <typename TI
+template <typename TImage>
+Eigen::MatrixXd Grab
