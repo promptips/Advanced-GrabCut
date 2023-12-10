@@ -64,4 +64,4 @@ void GrabCut<TImage>::SetInitialMask(ForegroundBackgroundSegmentMask* const mask
 }
 
 template <typename TImage>
-Eigen::MatrixXd Grab
+Eigen::MatrixXd GrabCut<TImage>::CreateMatrixFromP
