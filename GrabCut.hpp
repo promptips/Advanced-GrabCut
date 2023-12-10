@@ -60,4 +60,4 @@ void GrabCut<TImage>::SetInitialMask(ForegroundBackgroundSegmentMask* const mask
     ITKHelpers::DeepCopy(mask, this->InitialMask.GetPointer());
 
     // Initialize the segmentation mask from the initial mask
-    ITKHelpers::DeepCopy(mask, thi
+    ITKHelpers::DeepCopy(mask, this->SegmentationMask.GetPointer());
