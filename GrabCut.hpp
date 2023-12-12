@@ -67,4 +67,6 @@ template <typename TImage>
 Eigen::MatrixXd GrabCut<TImage>::CreateMatrixFromPixels(const std::vector<typename TImage::PixelType>& pixels)
 {
     unsigned int dimensionality = this->GetDimensionality();
-    Eigen::MatrixXd data(dimensionality, p
+    Eigen::MatrixXd data(dimensionality, pixels.size());
+
+    for(unsigne
