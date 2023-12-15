@@ -73,4 +73,4 @@ Eigen::MatrixXd GrabCut<TImage>::CreateMatrixFromPixels(const std::vector<typena
     {
         Eigen::VectorXd v(dimensionality);
         PixelType p = pixels[i];
-        fo
+        for(unsigned int d = 0; d < dimensiona
