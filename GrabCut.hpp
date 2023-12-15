@@ -85,4 +85,4 @@ Eigen::MatrixXd GrabCut<TImage>::CreateMatrixFromPixels(const std::vector<typena
 }
 
 template <typename TImage>
-void GrabCut<TImage>::InitializeModels(cons
+void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels
