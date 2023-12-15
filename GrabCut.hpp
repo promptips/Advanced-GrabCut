@@ -80,3 +80,8 @@ Eigen::MatrixXd GrabCut<TImage>::CreateMatrixFromPixels(const std::vector<typena
 
         data.col(i) = v;
     }
+
+    return data;
+}
+
+template 
