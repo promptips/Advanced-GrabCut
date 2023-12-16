@@ -91,4 +91,5 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
 
     // Initialize the foreground and background mixture models
     std::vector<Model*> foregroundModels;
-    std::vector<Model*> backgroundM
+    std::vector<Model*> backgroundModels;
+    foregroundM
