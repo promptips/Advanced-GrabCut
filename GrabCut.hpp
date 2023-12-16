@@ -89,4 +89,4 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
 {
     unsigned int dimensionality = this->GetDimensionality();
 
-    // Initialize the f
+    // Initialize the foreground and background
