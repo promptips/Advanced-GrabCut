@@ -90,4 +90,5 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
     unsigned int dimensionality = this->GetDimensionality();
 
     // Initialize the foreground and background mixture models
-    std::vector<
+    std::vector<Model*> foregroundModels;
+  
