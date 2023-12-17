@@ -97,4 +97,4 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
 
     for(unsigned int i = 0; i < numberOfModels; i++)
     {
-      Model* for
+      Model* foregroundModel = new GaussianModel(dimen
