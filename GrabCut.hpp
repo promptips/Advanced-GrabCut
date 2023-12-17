@@ -93,4 +93,6 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
     std::vector<Model*> foregroundModels;
     std::vector<Model*> backgroundModels;
     foregroundModels.resize(numberOfModels);
-    backgroundModels.resize
+    backgroundModels.resize(numberOfModels);
+
+    for(unsi
