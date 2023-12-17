@@ -95,4 +95,4 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
     foregroundModels.resize(numberOfModels);
     backgroundModels.resize(numberOfModels);
 
-    for(unsi
+    for(unsigned int i = 0; i < numberOfMo
