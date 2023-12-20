@@ -105,4 +105,7 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
     }
 
     this->ForegroundModels.SetModels(foregroundModels);
-    this->BackgroundModels.SetModels(background
+    this->BackgroundModels.SetModels(backgroundModels);
+}
+
+template <typename T
