@@ -109,4 +109,4 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
 }
 
 template <typename TImage>
-MixtureModel GrabCut<
+MixtureModel GrabCut<TImage>::ClusterPixels(const std
