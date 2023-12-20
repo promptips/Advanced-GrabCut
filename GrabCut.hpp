@@ -104,4 +104,4 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
       backgroundModels[i] = backgroundModel;
     }
 
-    this->Foregro
+    this->ForegroundModels.SetModels(foregroundMo
