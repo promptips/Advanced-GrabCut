@@ -108,4 +108,5 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
     this->BackgroundModels.SetModels(backgroundModels);
 }
 
-template <typename T
+template <typename TImage>
+MixtureModel GrabCut<
