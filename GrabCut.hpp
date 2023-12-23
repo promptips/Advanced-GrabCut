@@ -111,4 +111,4 @@ void GrabCut<TImage>::InitializeModels(const unsigned int numberOfModels)
 template <typename TImage>
 MixtureModel GrabCut<TImage>::ClusterPixels(const std::vector<typename TImage::PixelType>& pixels, const MixtureModel& mixtureModel)
 {
-    Eigen::MatrixXd dat
+    Eigen::MatrixXd data = CreateMatrixFromPixels(pi
