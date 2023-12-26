@@ -114,4 +114,5 @@ MixtureModel GrabCut<TImage>::ClusterPixels(const std::vector<typename TImage::P
     Eigen::MatrixXd data = CreateMatrixFromPixels(pixels);
 
     ExpectationMaximization expectationMaximization;
-    expectationMaximization.SetDat
+    expectationMaximization.SetData(data);
+    expectationMaximiz
