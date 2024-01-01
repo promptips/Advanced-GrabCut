@@ -120,4 +120,4 @@ MixtureModel GrabCut<TImage>::ClusterPixels(const std::vector<typename TImage::P
     expectationMaximization.SetMaxIterations(this->NumberOfEMIterations);
     expectationMaximization.Compute();
 
-    MixtureModel 
+    MixtureModel finalModel = expectation
