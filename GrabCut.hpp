@@ -126,4 +126,6 @@ MixtureModel GrabCut<TImage>::ClusterPixels(const std::vector<typename TImage::P
 }
 
 template <typename TImage>
-void GrabCut<TImage>::ClusterF
+void GrabCut<TImage>::ClusterForegroundAndBackground()
+{
+ 
