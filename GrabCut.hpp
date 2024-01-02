@@ -125,4 +125,5 @@ MixtureModel GrabCut<TImage>::ClusterPixels(const std::vector<typename TImage::P
     return finalModel;
 }
 
-template <typename
+template <typename TImage>
+void GrabCut<TImage>::ClusterF
