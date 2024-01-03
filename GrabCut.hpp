@@ -129,4 +129,4 @@ template <typename TImage>
 void GrabCut<TImage>::ClusterForegroundAndBackground()
 {
     // Foreground
-    
+    std::vector<itk::Index<2> > fore
