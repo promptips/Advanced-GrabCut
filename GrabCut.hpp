@@ -132,4 +132,4 @@ void GrabCut<TImage>::ClusterForegroundAndBackground()
     std::vector<itk::Index<2> > foregroundPixelIndices =
         ITKHelpers::GetPixelsWithValue(this->SegmentationMask.GetPointer(), ForegroundBackgroundSegmentMaskPixelTypeEnum::FOREGROUND);
 
-    std::vector<typena
+    std::vector<typename TImage::PixelType> foregrou
