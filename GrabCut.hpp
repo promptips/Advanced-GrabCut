@@ -134,4 +134,4 @@ void GrabCut<TImage>::ClusterForegroundAndBackground()
 
     std::vector<typename TImage::PixelType> foregroundPixels = ITKHelpers::GetPixelValues(this->Image.GetPointer(), foregroundPixelIndices);
 
-    std::cout
+    std::cout << "Starting foregroun
