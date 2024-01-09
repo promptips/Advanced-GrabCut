@@ -139,4 +139,4 @@ void GrabCut<TImage>::ClusterForegroundAndBackground()
 
     // Background
     std::vector<itk::Index<2> > backgroundPixelIndices =
-        ITKHelpe
+        ITKHelpers::GetPixelsWithValue(t
