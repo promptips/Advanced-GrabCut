@@ -138,4 +138,4 @@ void GrabCut<TImage>::ClusterForegroundAndBackground()
     this->ForegroundModels = ClusterPixels(foregroundPixels, this->ForegroundModels);
 
     // Background
-   
+    std::vector<itk::Index<2> > backgroundPix
