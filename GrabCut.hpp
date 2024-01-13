@@ -143,4 +143,4 @@ void GrabCut<TImage>::ClusterForegroundAndBackground()
 
     std::vector<typename TImage::PixelType> backgroundPixels = ITKHelpers::GetPixelValues(this->Image.GetPointer(), backgroundPixelIndices);
 
-    std::co
+    std::cout << "Starting background E
