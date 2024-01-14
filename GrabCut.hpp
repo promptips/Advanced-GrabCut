@@ -150,4 +150,4 @@ void GrabCut<TImage>::ClusterForegroundAndBackground()
 template <typename TImage>
 void GrabCut<TImage>::PerformSegmentation()
 {
-  Initializ
+  InitializeModels(5); // The GrabCut paper s
