@@ -148,3 +148,4 @@ void GrabCut<TImage>::ClusterForegroundAndBackground()
 }
 
 template <typename TImage>
+void GrabCut<TImage>::Perf
