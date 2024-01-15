@@ -150,4 +150,4 @@ void GrabCut<TImage>::ClusterForegroundAndBackground()
 template <typename TImage>
 void GrabCut<TImage>::PerformSegmentation()
 {
-  InitializeModels(5); // The GrabCut paper s
+  InitializeModels(5); // The GrabCut paper suggests using 5 models per mixture
