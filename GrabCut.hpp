@@ -160,4 +160,5 @@ void GrabCut<TImage>::PerformSegmentation()
       PerformIteration();
 
       // Get and write the result
-    
+      std::stringstream ssOutput;
+  
