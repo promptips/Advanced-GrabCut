@@ -159,4 +159,5 @@ void GrabCut<TImage>::PerformSegmentation()
       std::cout << "GrabCut iteration " << iteration << "..." << std::endl;
       PerformIteration();
 
-      // 
+      // Get and write the result
+    
