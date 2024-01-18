@@ -162,4 +162,5 @@ void GrabCut<TImage>::PerformSegmentation()
       // Get and write the result
       std::stringstream ssOutput;
       ssOutput << "result_" << iteration << ".png";
-      typename TImage::Pointer resul
+      typename TImage::Pointer result = TImage::New();
+      th
