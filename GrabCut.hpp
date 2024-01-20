@@ -164,4 +164,4 @@ void GrabCut<TImage>::PerformSegmentation()
       ssOutput << "result_" << iteration << ".png";
       typename TImage::Pointer result = TImage::New();
       this->GetSegmentedImage(result);
-      ITKHelpers::WriteImage(re
+      ITKHelpers::WriteImage(result.GetPointer(), ssOutput.str
