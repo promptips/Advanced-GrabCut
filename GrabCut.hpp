@@ -167,4 +167,9 @@ void GrabCut<TImage>::PerformSegmentation()
       ITKHelpers::WriteImage(result.GetPointer(), ssOutput.str());
 
       iteration++;
- 
+  }
+
+}
+
+template <typename TImage>
+void GrabCut<TIma
