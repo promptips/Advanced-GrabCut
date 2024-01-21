@@ -176,4 +176,4 @@ void GrabCut<TImage>::PerformIteration()
 {
     ClusterForegroundAndBackground();
 
-    // The originally 
+    // The originally specified background pixels are the onl
