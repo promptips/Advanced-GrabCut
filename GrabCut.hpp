@@ -176,4 +176,4 @@ void GrabCut<TImage>::PerformIteration()
 {
     ClusterForegroundAndBackground();
 
-    // The originally specified background pixels are the only ones that are definitely background (unless 
+    // The originally specified background pixels are the only ones that are definitely background (unless there is interactive refinin
