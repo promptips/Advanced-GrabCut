@@ -172,4 +172,5 @@ void GrabCut<TImage>::PerformSegmentation()
 }
 
 template <typename TImage>
-void GrabCut<TIma
+void GrabCut<TImage>::PerformIteration()
+{
