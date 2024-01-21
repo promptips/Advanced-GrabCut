@@ -174,3 +174,4 @@ void GrabCut<TImage>::PerformSegmentation()
 template <typename TImage>
 void GrabCut<TImage>::PerformIteration()
 {
+    ClusterForegroundAndBack
