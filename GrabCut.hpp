@@ -177,4 +177,5 @@ void GrabCut<TImage>::PerformIteration()
     ClusterForegroundAndBackground();
 
     // The originally specified background pixels are the only ones that are definitely background (unless there is interactive refining performed)
-    std::vector<itk::Index<2> > backgrou
+    std::vector<itk::Index<2> > backgroundPixels =
+        ITKHelpe
