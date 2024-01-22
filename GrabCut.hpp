@@ -180,4 +180,5 @@ void GrabCut<TImage>::PerformIteration()
     std::vector<itk::Index<2> > backgroundPixels =
         ITKHelpers::GetPixelsWithValue(this->InitialMask.GetPointer(), ForegroundBackgroundSegmentMaskPixelTypeEnum::BACKGROUND);
 
-    // Per
+    // Perform the graph cut
+    ImageGraphCu
