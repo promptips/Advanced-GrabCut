@@ -178,4 +178,4 @@ void GrabCut<TImage>::PerformIteration()
 
     // The originally specified background pixels are the only ones that are definitely background (unless there is interactive refining performed)
     std::vector<itk::Index<2> > backgroundPixels =
-        ITKHelpers::GetPixelsWithValue(this->InitialMask.GetPointer(), Foreg
+        ITKHelpers::GetPixelsWithValue(this->InitialMask.GetPointer(), ForegroundBackgroundSegmentMaskP
