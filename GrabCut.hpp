@@ -181,4 +181,5 @@ void GrabCut<TImage>::PerformIteration()
         ITKHelpers::GetPixelsWithValue(this->InitialMask.GetPointer(), ForegroundBackgroundSegmentMaskPixelTypeEnum::BACKGROUND);
 
     // Perform the graph cut
-    ImageGraphCu
+    ImageGraphCut<TImage> graphCut;
+    graphCut
