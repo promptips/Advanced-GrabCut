@@ -187,4 +187,5 @@ void GrabCut<TImage>::PerformIteration()
                 &GrabCut::
                 ForegroundLikelihood, this, _1));
 
-    graphCut.SetBackgroundLikelihoodFunction(boost::
+    graphCut.SetBackgroundLikelihoodFunction(boost::bind(
+                &G
