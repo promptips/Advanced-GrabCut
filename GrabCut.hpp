@@ -193,4 +193,7 @@ void GrabCut<TImage>::PerformIteration()
     graphCut.SetSinks(backgroundPixels);
     graphCut.PerformSegmentation();
 
-    ITKHelpers::DeepCopy(graphCut.GetSegmentMask(), this->SegmentationMask.G
+    ITKHelpers::DeepCopy(graphCut.GetSegmentMask(), this->SegmentationMask.GetPointer());
+}
+
+template <typen
