@@ -191,4 +191,6 @@ void GrabCut<TImage>::PerformIteration()
                 &GrabCut::
                 BackgroundLikelihood, this, _1));
     graphCut.SetSinks(backgroundPixels);
-    graphCut.PerformS
+    graphCut.PerformSegmentation();
+
+    ITKHelpers::D
