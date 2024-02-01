@@ -208,4 +208,5 @@ TImage* GrabCut<TImage>::GetImage()
     return this->Image;
 }
 
-tem
+template <typename TImage>
+void GrabCut
