@@ -197,4 +197,4 @@ void GrabCut<TImage>::PerformIteration()
 }
 
 template <typename TImage>
-ForegroundBackg
+ForegroundBackgroundSegmentMask* GrabCut<TImage
