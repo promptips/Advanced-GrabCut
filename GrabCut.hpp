@@ -199,4 +199,5 @@ void GrabCut<TImage>::PerformIteration()
 template <typename TImage>
 ForegroundBackgroundSegmentMask* GrabCut<TImage>::GetSegmentationMask()
 {
-    retu
+    return this->Segmentationmask;
+}
