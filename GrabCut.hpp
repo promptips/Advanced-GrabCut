@@ -209,4 +209,4 @@ TImage* GrabCut<TImage>::GetImage()
 }
 
 template <typename TImage>
-void GrabCut
+void GrabCut<TImage>::GetSegmentedIm
