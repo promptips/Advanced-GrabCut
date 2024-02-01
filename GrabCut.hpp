@@ -197,4 +197,6 @@ void GrabCut<TImage>::PerformIteration()
 }
 
 template <typename TImage>
-ForegroundBackgroundSegmentMask* GrabCut<TImage
+ForegroundBackgroundSegmentMask* GrabCut<TImage>::GetSegmentationMask()
+{
+    retu
