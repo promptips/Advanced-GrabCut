@@ -201,3 +201,6 @@ ForegroundBackgroundSegmentMask* GrabCut<TImage>::GetSegmentationMask()
 {
     return this->Segmentationmask;
 }
+
+template <typename TImage>
+TI
