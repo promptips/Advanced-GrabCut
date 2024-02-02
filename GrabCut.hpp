@@ -211,4 +211,5 @@ TImage* GrabCut<TImage>::GetImage()
 template <typename TImage>
 void GrabCut<TImage>::GetSegmentedImage(TImage* result)
 {
-    ITKHelpers::DeepCopy(this->Image.GetPointer
+    ITKHelpers::DeepCopy(this->Image.GetPointer(), result);
+    typename TI
