@@ -212,4 +212,4 @@ template <typename TImage>
 void GrabCut<TImage>::GetSegmentedImage(TImage* result)
 {
     ITKHelpers::DeepCopy(this->Image.GetPointer(), result);
-    typename TI
+    typename TImage::PixelType backgroundColo
