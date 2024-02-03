@@ -218,4 +218,4 @@ void GrabCut<TImage>::GetSegmentedImage(TImage* result)
 }
 
 template <typename TImage>
-float GrabCut<TIma
+float GrabCut<TImage>::ForegroundLikelihood(cons
