@@ -217,4 +217,5 @@ void GrabCut<TImage>::GetSegmentedImage(TImage* result)
     this->SegmentationMask->ApplyToImage(result, backgroundColor);
 }
 
-template <typenam
+template <typename TImage>
+float GrabCut<TIma
