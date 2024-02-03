@@ -214,4 +214,7 @@ void GrabCut<TImage>::GetSegmentedImage(TImage* result)
     ITKHelpers::DeepCopy(this->Image.GetPointer(), result);
     typename TImage::PixelType backgroundColor(this->GetDimensionality());
     backgroundColor.Fill(0);
-    this->SegmentationMask->ApplyToImage(result, backgro
+    this->SegmentationMask->ApplyToImage(result, backgroundColor);
+}
+
+template <typenam
