@@ -220,4 +220,4 @@ void GrabCut<TImage>::GetSegmentedImage(TImage* result)
 template <typename TImage>
 float GrabCut<TImage>::ForegroundLikelihood(const typename TImage::PixelType& pixel)
 {
-    Eigen::VectorXd p(this
+    Eigen::VectorXd p(this->GetDimensionality());
