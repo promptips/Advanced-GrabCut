@@ -231,4 +231,4 @@ float GrabCut<TImage>::ForegroundLikelihood(const typename TImage::PixelType& pi
 }
 
 template <typename TImage>
-float GrabCut<TImage>::
+float GrabCut<TImage>::BackgroundLikelihood(const typenam
