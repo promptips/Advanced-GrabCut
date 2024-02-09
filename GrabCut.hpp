@@ -236,4 +236,6 @@ float GrabCut<TImage>::BackgroundLikelihood(const typename TImage::PixelType& pi
     Eigen::VectorXd p(this->GetDimensionality());
     p(0) = pixel[0];
     p(1) = pixel[1];
-    
+    p(2) = pixel[2];
+
+    float likel
