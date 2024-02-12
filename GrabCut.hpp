@@ -238,4 +238,6 @@ float GrabCut<TImage>::BackgroundLikelihood(const typename TImage::PixelType& pi
     p(1) = pixel[1];
     p(2) = pixel[2];
 
-    float likelihood = this->BackgroundMo
+    float likelihood = this->BackgroundModels.WeightedEvaluate(p);
+
+    ret
