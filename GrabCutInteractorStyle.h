@@ -1,1 +1,2 @@
-#ifndef GrabCutInteractorStyle
+#ifndef GrabCutInteractorStyle_h
+#define GrabCutInte
