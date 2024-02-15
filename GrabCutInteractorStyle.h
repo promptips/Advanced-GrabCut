@@ -1,2 +1,4 @@
 #ifndef GrabCutInteractorStyle_h
-#define GrabCutInte
+#define GrabCutInteractorStyle_h
+
+#include <vtkInteract
