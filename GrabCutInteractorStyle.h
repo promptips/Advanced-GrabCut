@@ -6,4 +6,5 @@
 //#include "vtkMemberFunctionCommand.h"
 
 class vtkRenderer;
-class 
+class vtkImageActor;
+class vtkImageClip
