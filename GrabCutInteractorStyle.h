@@ -7,4 +7,6 @@
 
 class vtkRenderer;
 class vtkImageActor;
-class vtkImageClip
+class vtkImageClip;
+class vtkBorderWidget;
+clas
