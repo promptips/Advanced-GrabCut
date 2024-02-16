@@ -2,4 +2,5 @@
 #define GrabCutInteractorStyle_h
 
 #include <vtkInteractorStyleImage.h>
-#include 
+#include <vtkSmartPointer.h>
+//#incl
