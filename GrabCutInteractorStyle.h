@@ -12,4 +12,5 @@ class vtkBorderWidget;
 class vtkImageData;
 class vtkExpectationMaximization;
 
-#include 
+#include <vnl/vnl_vector.h>
+#include <v
