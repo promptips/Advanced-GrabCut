@@ -10,4 +10,6 @@ class vtkImageActor;
 class vtkImageClip;
 class vtkBorderWidget;
 class vtkImageData;
-class vtkExpec
+class vtkExpectationMaximization;
+
+#include 
