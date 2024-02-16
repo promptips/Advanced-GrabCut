@@ -9,4 +9,5 @@ class vtkRenderer;
 class vtkImageActor;
 class vtkImageClip;
 class vtkBorderWidget;
-clas
+class vtkImageData;
+class vtkExpec
