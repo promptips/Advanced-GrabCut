@@ -3,4 +3,7 @@
 
 #include <vtkInteractorStyleImage.h>
 #include <vtkSmartPointer.h>
-//#include "vtkMemberFunctionCommand.
+//#include "vtkMemberFunctionCommand.h"
+
+class vtkRenderer;
+class 
