@@ -15,4 +15,7 @@ class vtkExpectationMaximization;
 #include <vnl/vnl_vector.h>
 #include <vector>
 
-class GrabCutInteractorStyle : public vtkIntera
+class GrabCutInteractorStyle : public vtkInteractorStyleImage
+{
+public:
+  
