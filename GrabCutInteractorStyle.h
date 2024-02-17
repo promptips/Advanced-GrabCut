@@ -13,4 +13,6 @@ class vtkImageData;
 class vtkExpectationMaximization;
 
 #include <vnl/vnl_vector.h>
-#include <v
+#include <vector>
+
+class GrabCutIntera
