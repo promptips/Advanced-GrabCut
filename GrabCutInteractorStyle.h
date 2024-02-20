@@ -18,4 +18,4 @@ class vtkExpectationMaximization;
 class GrabCutInteractorStyle : public vtkInteractorStyleImage
 {
 public:
-  
+  static GrabCutInteractorStyl
