@@ -19,4 +19,6 @@ class GrabCutInteractorStyle : public vtkInteractorStyleImage
 {
 public:
   static GrabCutInteractorStyle* New();
-  vtkTypeMacro(GrabCutInteractorStyle,
+  vtkTypeMacro(GrabCutInteractorStyle, vtkInteractorStyleImage);
+
+  GrabC
