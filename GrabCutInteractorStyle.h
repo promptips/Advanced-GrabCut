@@ -21,4 +21,6 @@ public:
   static GrabCutInteractorStyle* New();
   vtkTypeMacro(GrabCutInteractorStyle, vtkInteractorStyleImage);
 
-  GrabC
+  GrabCutInteractorStyle();
+
+  void O
