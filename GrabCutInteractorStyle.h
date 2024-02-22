@@ -23,4 +23,6 @@ public:
 
   GrabCutInteractorStyle();
 
-  void O
+  void OnKeyPress();
+
+  void UpdateCrop
