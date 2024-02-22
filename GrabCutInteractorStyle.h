@@ -25,4 +25,5 @@ public:
 
   void OnKeyPress();
 
-  void UpdateCrop
+  void UpdateCropping(vtkBorderWidget* borderWidget);
+
