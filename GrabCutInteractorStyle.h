@@ -29,4 +29,7 @@ public:
 
   bool IsInitialized();
 
-protect
+protected:
+
+  // Constants
+  int
