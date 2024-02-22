@@ -27,3 +27,6 @@ public:
 
   void UpdateCropping(vtkBorderWidget* borderWidget);
 
+  bool IsInitialized();
+
+protect
