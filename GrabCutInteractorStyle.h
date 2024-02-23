@@ -35,4 +35,6 @@ protected:
   int FOREGROUNDALPHA;
   int BACKGROUNDALPHA;
 
-  // Fun
+  // Functions
+  void Refresh();
+  std:
