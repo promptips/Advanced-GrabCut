@@ -33,4 +33,6 @@ protected:
 
   // Constants
   int FOREGROUNDALPHA;
-  int 
+  int BACKGROUNDALPHA;
+
+  // Fun
