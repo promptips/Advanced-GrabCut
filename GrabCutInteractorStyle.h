@@ -38,4 +38,6 @@ protected:
   // Functions
   void Refresh();
   std::vector<vnl_vector<double> > CreateRGBPoints(unsigned char pointType);
-  void CreateImageFromModels(vtkExpectationMaximization* emForeground, vtkExpectationMaximization* emBackground
+  void CreateImageFromModels(vtkExpectationMaximization* emForeground, vtkExpectationMaximization* emBackground); // For sanity only
+
+ 
