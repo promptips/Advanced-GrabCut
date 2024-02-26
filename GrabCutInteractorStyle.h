@@ -43,4 +43,4 @@ protected:
   // Inputs
   vtkSmartPointer<vtkRenderer> LeftRenderer;
   vtkSmartPointer<vtkRenderer> RightRenderer;
- 
+  vtkSmartPointer<vtkImageAct
