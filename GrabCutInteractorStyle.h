@@ -41,4 +41,4 @@ protected:
   void CreateImageFromModels(vtkExpectationMaximization* emForeground, vtkExpectationMaximization* emBackground); // For sanity only
 
   // Inputs
-  vtkSmartPoin
+  vtkSmartPointer<vtkRenderer> LeftRender
