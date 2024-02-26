@@ -42,4 +42,5 @@ protected:
 
   // Inputs
   vtkSmartPointer<vtkRenderer> LeftRenderer;
-  vtkSmartPointer<vtkR
+  vtkSmartPointer<vtkRenderer> RightRenderer;
+ 
