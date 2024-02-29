@@ -49,4 +49,4 @@ protected:
   vtkSmartPointer<vtkImageData> InputImage;
 
   // Internal
-  vtkSmar
+  vtkSmartPointer<vtkImageAct
