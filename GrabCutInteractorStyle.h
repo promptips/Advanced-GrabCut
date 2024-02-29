@@ -49,4 +49,5 @@ protected:
   vtkSmartPointer<vtkImageData> InputImage;
 
   // Internal
-  vtkSmartPointer<vtkImageAct
+  vtkSmartPointer<vtkImageActor> MaskActor;
+  vtkSmartPointe
