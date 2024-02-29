@@ -45,4 +45,4 @@ protected:
   vtkSmartPointer<vtkRenderer> RightRenderer;
   vtkSmartPointer<vtkImageActor> ImageActor;
   vtkSmartPointer<vtkImageActor> ClippedActor;
-  vtk
+  vtkSmartPointer<vtkImageCl
