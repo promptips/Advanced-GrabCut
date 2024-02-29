@@ -46,4 +46,7 @@ protected:
   vtkSmartPointer<vtkImageActor> ImageActor;
   vtkSmartPointer<vtkImageActor> ClippedActor;
   vtkSmartPointer<vtkImageClip> ClipFilter;
-  vtkSmartPointer<vtkImageDat
+  vtkSmartPointer<vtkImageData> InputImage;
+
+  // Internal
+  vtkSmar
