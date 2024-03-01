@@ -57,4 +57,7 @@ protected:
 
   int NumberOfModels;
 
-  // Should not be in the cl
+  // Should not be in the class
+  bool IsNaN(const double a);
+};
+
