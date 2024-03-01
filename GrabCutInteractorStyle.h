@@ -61,4 +61,6 @@ protected:
   bool IsNaN(const double a);
 };
 
-void PrintExtent(std::string ar
+void PrintExtent(std::string arrayName, int extent[6]);
+
+#endif
