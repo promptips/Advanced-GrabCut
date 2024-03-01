@@ -57,4 +57,4 @@ protected:
 
   int NumberOfModels;
 
-  /
+  // Should not be in the cl
