@@ -54,3 +54,7 @@ protected:
   vtkSmartPointer<vtkBorderWidget> BorderWidget;
 
   void CatchWidgetEvent(vtkObject* caller, long unsigned int eventId, void* callData);
+
+  int NumberOfModels;
+
+  /
