@@ -69,3 +69,28 @@ void Form::actionOpen_triggered()
     std::cout << "Cancelled." << std::endl;
     return;
     }
+
+  std::cout << "Got filename: " << filename.toStdString() << std::endl;
+
+  // Read file
+  vtkSmartPointer<vtkImageReader2Factory> readerFactory =
+    vtkSmartPointer<vtkImageReader2Factory>::New();
+  vtkImageReader2* imageReader = readerFactory->CreateImageReader2(filename.toStdString().c_str());
+  imageReader->SetFileName(filename.toStdString().c_str());
+  imageReader->Update();
+
+  this->OriginalImage->ShallowCopy(imageReader->GetOutput());
+
+  this->OriginalImageActor->SetInputData(this->OriginalImage);
+
+  imageReader->Delete();
+
+  this->LeftRenderer->AddActor(OriginalImageActor);
+  this->LeftRenderer->ResetCamera();
+}
+
+void Form::Refresh()
+{
+  this->LeftRenderer->Render();
+  this->RightRenderer->Render();
+  this->qvtkWidgetRight->GetRenderWindow()->Render();
