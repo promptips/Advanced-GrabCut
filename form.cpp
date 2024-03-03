@@ -215,3 +215,33 @@ void Form::btnCut_clicked()
     backgroundRGBpoints.insert(backgroundRGBpoints.end(), alwaysBackgroundRGBpoints.begin(), alwaysBackgroundRGBpoints.end());
     std::cout << "There are " << foregroundRGBpoints.size() << " foreground points." << std::endl;
     if(foregroundRGBpoints.size() < 10)
+      {
+      std::cerr << "There are not enough foreground points!" << std::endl;
+      exit(-1);
+      }
+    std::cout << "There are " << backgroundRGBpoints.size() << " background points." << std::endl;
+
+    std::cout << "Foreground EM..." << std::endl;
+    emForeground->SetData(foregroundRGBpoints);
+    emForeground->SetModels(foregroundModels);
+    emForeground->Update();
+
+    std::cout << "Background EM..." << std::endl;
+    emBackground->SetData(backgroundRGBpoints);
+    emBackground->SetModels(backgroundModels);
+    emBackground->Update();
+
+    // Create image from models (this is for sanity only)
+    CreateImageFromModels(emForeground, emBackground);
+
+    std::cout << "Cutting graph..." << std::endl;
+    graphCutFilter->SetInputData(this->OriginalImage);
+    graphCutFilter->SetSourceSinkMask(this->AlphaMask);
+    graphCutFilter->Update();
+
+    std::cout << "Refreshing..." << std::endl;
+    this->AlphaMask->ShallowCopy(graphCutFilter->GetOutput());
+
+    graphCutFilter->Modified();
+    emForeground->Modified();
+    emBackground->Modified();
