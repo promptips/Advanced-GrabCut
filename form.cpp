@@ -94,3 +94,37 @@ void Form::Refresh()
   this->LeftRenderer->Render();
   this->RightRenderer->Render();
   this->qvtkWidgetRight->GetRenderWindow()->Render();
+  this->qvtkWidgetLeft->GetRenderWindow()->Render();
+}
+
+#if 0
+
+  vtkSmartPointer<vtkImageClip> imageClip =
+    vtkSmartPointer<vtkImageClip>::New();
+  imageClip->SetInputConnection(jPEGReader->GetOutputPort());
+  imageClip->SetOutputWholeExtent(jPEGReader->GetOutput()->GetWholeExtent());
+  imageClip->ClipDataOn();
+
+  vtkSmartPointer<vtkImageActor> clipActor =
+    vtkSmartPointer<vtkImageActor>::New();
+  clipActor->SetInput(imageClip->GetOutput());
+  rightRenderer->AddActor(clipActor);
+
+  vtkSmartPointer<GrabCutInteractorStyle> style =
+    vtkSmartPointer<GrabCutInteractorStyle>::New();
+  interactor->SetInteractorStyle(style);
+  style->SetLeftRenderer(leftRenderer);
+  style->SetRightRenderer(rightRenderer);
+  style->SetImageActor(imageActor);
+  style->SetClipFilter(imageClip);
+  style->SetInputImage(jPEGReader->GetOutput());
+
+  interactor->SetRenderWindow(renderWindow);
+  renderWindow->Render();
+
+  interactor->Start();
+#endif
+
+void Form::btnCut_clicked()
+{
+  // Setup the mask
