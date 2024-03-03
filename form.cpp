@@ -188,3 +188,30 @@ void Form::btnCut_clicked()
     }
 
   vtkSmartPointer<vtkExpectationMaximization> emForeground =
+    vtkSmartPointer<vtkExpectationMaximization>::New();
+  emForeground->SetMinChange(2.0);
+  emForeground->SetInitializationTechniqueToKMeans();
+
+  vtkSmartPointer<vtkExpectationMaximization> emBackground =
+    vtkSmartPointer<vtkExpectationMaximization>::New();
+  emBackground->SetMinChange(2.0);
+  emBackground->SetInitializationTechniqueToKMeans();
+
+  vtkSmartPointer<ImageGraphCut> graphCutFilter =
+    vtkSmartPointer<ImageGraphCut>::New();
+  graphCutFilter->BackgroundEM = emBackground;
+  graphCutFilter->ForegroundEM = emForeground;
+
+  unsigned int totalIterations = 3;
+  for(unsigned int i = 0; i < totalIterations; i++)
+    {
+    std::cout << "Grabcuts iteration " << i << std::endl;
+
+    // Convert these RGB colors to XYZ points to feed to EM
+
+    std::vector<vnl_vector<double> > foregroundRGBpoints = CreateRGBPoints(ImageGraphCut::SOURCE);
+    std::vector<vnl_vector<double> > backgroundRGBpoints = CreateRGBPoints(ImageGraphCut::SINK);
+    std::vector<vnl_vector<double> > alwaysBackgroundRGBpoints = CreateRGBPoints(ImageGraphCut::ALWAYSSINK);
+    backgroundRGBpoints.insert(backgroundRGBpoints.end(), alwaysBackgroundRGBpoints.begin(), alwaysBackgroundRGBpoints.end());
+    std::cout << "There are " << foregroundRGBpoints.size() << " foreground points." << std::endl;
+    if(foregroundRGBpoints.size() < 10)
