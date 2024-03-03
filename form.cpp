@@ -128,3 +128,31 @@ void Form::Refresh()
 void Form::btnCut_clicked()
 {
   // Setup the mask
+  int extent[6];
+  this->OriginalImage->GetExtent(extent);
+  //PrintExtent("extent", extent);
+
+  this->AlphaMask->SetExtent(extent);
+  this->AlphaMask->AllocateScalars(VTK_UNSIGNED_CHAR, 1);
+  
+  int clippedExtent[6];
+  ClipFilter->GetOutput()->GetExtent(clippedExtent);
+  //PrintExtent("clippedExtent", clippedExtent);
+
+  // Initialize the mask (everything background)
+  for(int y = extent[2]; y <= extent[3]; y++)
+    {
+    for(int x = extent[0]; x <= extent[1]; x++)
+      {
+      unsigned char* pixel = static_cast<unsigned char*>(this->AlphaMask->GetScalarPointer(x,y,0));
+      pixel[0] = ImageGraphCut::ALWAYSSINK;
+      }
+    }
+
+  // Mask the foreground
+  for(int y = clippedExtent[2]; y <= clippedExtent[3]; y++)
+    {
+    for(int x = clippedExtent[0]; x <= clippedExtent[1]; x++)
+      {
+      unsigned char* pixel = static_cast<unsigned char*>(this->AlphaMask->GetScalarPointer(x,y,0));
+      pixel[0] = ImageGraphCut::SOURCE;
