@@ -156,3 +156,35 @@ void Form::btnCut_clicked()
       {
       unsigned char* pixel = static_cast<unsigned char*>(this->AlphaMask->GetScalarPointer(x,y,0));
       pixel[0] = ImageGraphCut::SOURCE;
+      }
+    }
+
+  vtkSmartPointer<vtkJPEGWriter> writer =
+    vtkSmartPointer<vtkJPEGWriter>::New();
+  writer->SetInputData(this->AlphaMask);
+  writer->SetFileName("InitialMask.jpg");
+  writer->Write();
+
+  unsigned int numberOfMixtures = 5;
+
+  std::vector<Model*> foregroundModels(numberOfMixtures);
+
+  for(unsigned int i = 0; i < foregroundModels.size(); i++)
+    {
+    Model* model = new GaussianND;
+    model->SetDimensionality(3); // rgb
+    model->Init();
+    foregroundModels[i] = model;
+    }
+
+  std::vector<Model*> backgroundModels(numberOfMixtures);
+
+  for(unsigned int i = 0; i < backgroundModels.size(); i++)
+    {
+    Model* model = new GaussianND;
+    model->SetDimensionality(3); // rgb
+    model->Init();
+    backgroundModels[i] = model;
+    }
+
+  vtkSmartPointer<vtkExpectationMaximization> emForeground =
