@@ -280,3 +280,36 @@ void Form::CatchWidgetEvent(vtkObject* caller, long unsigned int eventId, void* 
 {
   this->UpdateCropping();
 }
+
+void Form::UpdateCropping()
+{
+  //this->ClipFilter->SetInputConnection(this->OriginalImage->GetProducerPort());
+
+  // Get the world coordinates of the two corners of the box
+  vtkCoordinate* lowerLeftCoordinate =
+    static_cast<vtkBorderRepresentation*>
+    (this->BorderWidget->GetRepresentation())->GetPositionCoordinate();
+  lowerLeftCoordinate->SetViewport(this->LeftRenderer);
+  double* lowerLeft =
+    lowerLeftCoordinate->GetComputedWorldValue(this->LeftRenderer);
+
+  vtkCoordinate* upperRightCoordinate =
+    static_cast<vtkBorderRepresentation*>
+    (this->BorderWidget->GetRepresentation())->GetPosition2Coordinate();
+  double* upperRight =
+    upperRightCoordinate->GetComputedWorldValue(this->LeftRenderer);
+
+  double* bounds = this->OriginalImageActor->GetBounds();
+  double xmin = bounds[0];
+  double xmax = bounds[1];
+  double ymin = bounds[2];
+  double ymax = bounds[3];
+
+  this->ClipFilter->SetOutputWholeExtent(
+      vtkMath::Round(std::max(lowerLeft[0], static_cast<double>(0))),
+      vtkMath::Round(std::min(upperRight[0], xmax)),
+      vtkMath::Round(std::max(lowerLeft[1], static_cast<double>(0))),
+      vtkMath::Round(std::min(upperRight[1], ymax)),
+      0, 0);
+
+  if( (lowerLeft[0] > xmax) ||
