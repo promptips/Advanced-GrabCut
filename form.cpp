@@ -313,3 +313,41 @@ void Form::UpdateCropping()
       0, 0);
 
   if( (lowerLeft[0] > xmax) ||
+      (upperRight[0] < xmin) ||
+      (lowerLeft[1] > ymax) ||
+      (upperRight[1] < ymin) )
+    {
+    this->ClipFilter->SetOutputWholeExtent(0,0,0,0,0,0);
+    std::cout << "box is NOT inside image" << std::endl;
+    }
+
+  this->ClipFilter->Update();
+  this->ClippedActor->SetInputData(this->ClipFilter->GetOutput());
+  this->RightRenderer->AddActor(this->ClippedActor);
+  this->RightRenderer->ResetCamera();
+
+  this->Refresh();
+
+}
+
+
+
+std::vector<vnl_vector<double> > Form::CreateRGBPoints(unsigned char pointType)
+{
+  std::vector<vnl_vector<double> > rgbPoints;
+
+  int extent[6];
+  this->OriginalImage->GetExtent(extent);
+  //PrintExtent("extent", extent);
+
+  // Loop over the mask image
+  for(int y = extent[2]; y <= extent[3]; y++)
+    {
+    for(int x = extent[0]; x <= extent[1]; x++)
+      {
+      unsigned char* maskValue = static_cast<unsigned char*>(this->AlphaMask->GetScalarPointer(x,y,0));
+      unsigned char* pixel = static_cast<unsigned char*>(this->OriginalImage->GetScalarPointer(x,y,0));
+      if(maskValue[0] == pointType)
+        {
+        vnl_vector<double> v(3);
+        for(unsigned int d = 0; d < 3; d++)
