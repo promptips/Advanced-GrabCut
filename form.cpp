@@ -245,3 +245,38 @@ void Form::btnCut_clicked()
     graphCutFilter->Modified();
     emForeground->Modified();
     emBackground->Modified();
+
+    this->Refresh();
+
+    std::stringstream ss;
+    ss << i << ".jpg";
+    writer->SetFileName(ss.str().c_str());
+    writer->Write();
+    }
+
+  vtkSmartPointer<vtkLookupTable> lookupTable =
+    vtkSmartPointer<vtkLookupTable>::New();
+  lookupTable->SetNumberOfTableValues(3);
+  lookupTable->SetRange(0.0,255.0);
+  lookupTable->SetTableValue(0, 0.0, 0.0, 0.0, ImageGraphCut::SINK); //transparent
+  lookupTable->SetTableValue(1, 0.0, 0.0, 0.0, ImageGraphCut::ALWAYSSINK); //transparent
+  lookupTable->SetTableValue(2, 0.0, 1.0, 0.0, FOREGROUNDALPHA); //opaque and green
+  lookupTable->Build();
+
+  vtkSmartPointer<vtkImageMapToColors> mapTransparency =
+    vtkSmartPointer<vtkImageMapToColors>::New();
+  mapTransparency->SetLookupTable(lookupTable);
+  mapTransparency->SetInputData(graphCutFilter->GetOutput());
+  mapTransparency->PassAlphaToOutputOn();
+
+  this->MaskActor->SetInputData(mapTransparency->GetOutput());
+
+  this->RightRenderer->AddActor(this->MaskActor);
+  this->Refresh();
+}
+
+
+void Form::CatchWidgetEvent(vtkObject* caller, long unsigned int eventId, void* callData)
+{
+  this->UpdateCropping();
+}
