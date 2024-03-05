@@ -381,3 +381,35 @@ bool Form::IsNaN(const double a)
   }
   return false;
 }
+
+void Form::CreateImageFromModels(vtkExpectationMaximization* emForeground, vtkExpectationMaximization* emBackground)
+{
+  vtkSmartPointer<vtkImageData> image =
+    vtkSmartPointer<vtkImageData>::New();
+  image->DeepCopy(this->AlphaMask);
+
+  int extent[6];
+  image->GetExtent(extent);
+
+  unsigned int counter = 0;
+  for(int i = extent[0]; i < extent[1]; i++)
+    {
+    for(int j = extent[2]; j < extent[3]; j++)
+      {
+      unsigned char* outputPixel = static_cast<unsigned char*>(image->GetScalarPointer(i,j,0));
+      unsigned char* inputPixel = static_cast<unsigned char*>(this->OriginalImage->GetScalarPointer(i,j,0));
+
+      int p[3] = {i,j,0};
+      vtkIdType currentIndex = image->ComputePointId(p);
+
+      vnl_vector<double> rgb(3);
+      rgb(0) = inputPixel[0];
+      rgb(1) = inputPixel[1];
+      rgb(2) = inputPixel[2];
+      double backgroundLikelihood = emBackground->WeightedEvaluate(rgb);
+      double foregroundLikelihood = emForeground->WeightedEvaluate(rgb);
+
+      if(foregroundLikelihood > backgroundLikelihood)
+        {
+        //std::cout << "foreground pixel" << std::endl;
+        counter++;
