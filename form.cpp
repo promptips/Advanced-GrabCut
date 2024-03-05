@@ -351,3 +351,33 @@ std::vector<vnl_vector<double> > Form::CreateRGBPoints(unsigned char pointType)
         {
         vnl_vector<double> v(3);
         for(unsigned int d = 0; d < 3; d++)
+          {
+          v(d) = pixel[d];
+          if(v(d) < 0 || v(d) > 255)
+            {
+            std::cout << "Invalid! " << v(d) << " must be 0 < v(d) < 255!" << std::endl;
+            exit(-1);
+            }
+          }
+        rgbPoints.push_back(v);
+        }
+      }
+    }
+
+  return rgbPoints;
+}
+
+void PrintExtent(std::string arrayName, int extent[6])
+{
+     std::cout << arrayName << ": " << extent[0] << " " << extent[1] << " " << extent[2] << " "
+        << extent[3] << " " << extent[4] << " " << extent[5] << std::endl;
+}
+
+bool Form::IsNaN(const double a)
+{
+  if(a!=a)
+  {
+    return true;
+  }
+  return false;
+}
