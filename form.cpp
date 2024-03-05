@@ -433,3 +433,32 @@ void Form::CreateImageFromModels(vtkExpectationMaximization* emForeground, vtkEx
   writer->SetFileName("BeforeGraphCuts.jpg");
   writer->Write();
 }
+
+/*
+  static_cast<vtkBorderRepresentation*>
+    (this->BorderWidget->GetRepresentation())->GetBorderProperty()->SetColor(0,1,0);
+  static_cast<vtkBorderRepresentation*>
+    (this->BorderWidget->GetRepresentation())->SetPosition(0.4,0.4);
+  static_cast<vtkBorderRepresentation*>
+    (this->BorderWidget->GetRepresentation())->SetPosition2(0.2,0.2);
+  this->BorderWidget->SelectableOff();
+
+
+
+  this->AlphaMask = vtkSmartPointer<vtkImageData>::New();
+
+  this->MaskActor = vtkSmartPointer<vtkImageActor>::New();
+
+  // Defaults
+  this->NumberOfModels = 5;
+
+  // Fixed values
+  this->FOREGROUNDALPHA = 1;
+  this->BACKGROUNDALPHA = 0;
+
+  this->LeftRenderer = NULL;
+  this->RightRenderer = NULL;
+  this->ImageActor = NULL;
+  this->InputImage = NULL;
+
+*/
