@@ -5,4 +5,6 @@
 
 #include "ImageGraphCut.h"
 
-#include <vtkSm
+#include <vtkSmartPointer.h>
+
+#include <vn
