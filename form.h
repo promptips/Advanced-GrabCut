@@ -3,4 +3,6 @@
 
 #include "ui_form.h"
 
-#include "Image
+#include "ImageGraphCut.h"
+
+#include <vtkSm
