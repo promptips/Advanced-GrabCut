@@ -9,4 +9,5 @@
 
 #include <vnl/vnl_vector.h>
 
-class vtkBor
+class vtkBorderWidget;
+class vtkImageA
