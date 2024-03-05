@@ -7,4 +7,6 @@
 
 #include <vtkSmartPointer.h>
 
-#include <vn
+#include <vnl/vnl_vector.h>
+
+class vtkBor
