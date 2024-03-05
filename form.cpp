@@ -413,3 +413,23 @@ void Form::CreateImageFromModels(vtkExpectationMaximization* emForeground, vtkEx
         {
         //std::cout << "foreground pixel" << std::endl;
         counter++;
+        outputPixel[0] = 255;
+        outputPixel[1] = 255;
+        outputPixel[2] = 255;
+        }
+      else //background
+        {
+        outputPixel[0] = 0;
+        outputPixel[1] = 0;
+        outputPixel[2] = 0;
+        }
+      }
+    }
+
+  std::cout << "There are " << counter << " foreground pixels." << std::endl;
+  vtkSmartPointer<vtkJPEGWriter> writer =
+    vtkSmartPointer<vtkJPEGWriter>::New();
+  writer->SetInputData(image);
+  writer->SetFileName("BeforeGraphCuts.jpg");
+  writer->Write();
+}
