@@ -14,3 +14,5 @@ class vtkImageActor;
 class vtkRenderer;
 class vtkImageData;
 class vtkImageClip;
+
+class Form : public QMainWindow, 
