@@ -19,4 +19,7 @@ class Form : public QMainWindow, private Ui::MainWindow
 {
 	Q_OBJECT
 public:
-    Form(QWidget *parent = 0)
+    Form(QWidget *parent = 0);
+
+public slots:
+    void ac
