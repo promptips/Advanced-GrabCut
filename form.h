@@ -19,4 +19,4 @@ class Form : public QMainWindow, private Ui::MainWindow
 {
 	Q_OBJECT
 public:
- 
+    Form(QWidget *parent = 0)
