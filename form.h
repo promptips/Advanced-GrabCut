@@ -10,4 +10,6 @@
 #include <vnl/vnl_vector.h>
 
 class vtkBorderWidget;
-class vtkImageA
+class vtkImageActor;
+class vtkRenderer;
+class v
