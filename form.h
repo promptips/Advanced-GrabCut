@@ -15,4 +15,8 @@ class vtkRenderer;
 class vtkImageData;
 class vtkImageClip;
 
-class Form : public QMainWindow, 
+class Form : public QMainWindow, private Ui::MainWindow
+{
+	Q_OBJECT
+public:
+ 
