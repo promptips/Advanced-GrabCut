@@ -12,4 +12,5 @@
 class vtkBorderWidget;
 class vtkImageActor;
 class vtkRenderer;
-class v
+class vtkImageData;
+class vtkImageClip;
