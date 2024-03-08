@@ -28,4 +28,4 @@ public slots:
 protected:
   vtkSmartPointer<ImageGraphCut> GraphCut;
 
-  vtkSmartPoi
+  vtkSmartPointer<vtkImageActor> OriginalImageActor;
