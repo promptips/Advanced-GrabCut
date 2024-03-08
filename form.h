@@ -29,3 +29,4 @@ protected:
   vtkSmartPointer<ImageGraphCut> GraphCut;
 
   vtkSmartPointer<vtkImageActor> OriginalImageActor;
+  vtkSmartPointer<vtkRenderer> Lef
