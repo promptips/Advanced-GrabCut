@@ -23,4 +23,6 @@ public:
 
 public slots:
     void actionOpen_triggered();
-    void b
+    void btnCut_clicked();
+
+protect
