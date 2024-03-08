@@ -25,4 +25,5 @@ public slots:
     void actionOpen_triggered();
     void btnCut_clicked();
 
-protect
+protected:
+  vtkSmartPointer<ImageGr
