@@ -22,4 +22,5 @@ public:
     Form(QWidget *parent = 0);
 
 public slots:
-    void ac
+    void actionOpen_triggered();
+    void b
