@@ -26,4 +26,6 @@ public slots:
     void btnCut_clicked();
 
 protected:
-  vtkSmartPointer<ImageGr
+  vtkSmartPointer<ImageGraphCut> GraphCut;
+
+  vtkSmartPoi
