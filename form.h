@@ -33,4 +33,6 @@ protected:
   vtkSmartPointer<vtkRenderer> RightRenderer;
   vtkSmartPointer<vtkImageData> OriginalImage;
 
-  // Fun
+  // Functions
+  void Refresh();
+  
