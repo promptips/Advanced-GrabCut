@@ -31,4 +31,6 @@ protected:
   vtkSmartPointer<vtkImageActor> OriginalImageActor;
   vtkSmartPointer<vtkRenderer> LeftRenderer;
   vtkSmartPointer<vtkRenderer> RightRenderer;
-  vtkSmartPointer<vtkImage
+  vtkSmartPointer<vtkImageData> OriginalImage;
+
+  // Fun
