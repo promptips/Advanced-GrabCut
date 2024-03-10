@@ -36,4 +36,4 @@ protected:
   // Functions
   void Refresh();
   std::vector<vnl_vector<double> > CreateRGBPoints(unsigned char pointType);
- 
+  void CreateImageFromM
