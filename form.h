@@ -35,4 +35,5 @@ protected:
 
   // Functions
   void Refresh();
-  std::vector<vnl_vector<double> > CreateRGBPoints(uns
+  std::vector<vnl_vector<double> > CreateRGBPoints(unsigned char pointType);
+ 
