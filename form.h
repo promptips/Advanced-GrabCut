@@ -40,4 +40,5 @@ protected:
   void UpdateCropping();
 
   // Inputs
-  vtkSmartPointer<vtkImageActor> Cli
+  vtkSmartPointer<vtkImageActor> ClippedActor;
+  vtkSmart
