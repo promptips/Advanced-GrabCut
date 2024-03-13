@@ -44,4 +44,5 @@ protected:
   vtkSmartPointer<vtkImageClip> ClipFilter;
 
   // Internal
-  vtkSmartPointer<v
+  vtkSmartPointer<vtkImageActor> MaskActor;
+  vtkSma
