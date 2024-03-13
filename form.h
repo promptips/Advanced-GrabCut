@@ -41,4 +41,6 @@ protected:
 
   // Inputs
   vtkSmartPointer<vtkImageActor> ClippedActor;
-  vtkSmart
+  vtkSmartPointer<vtkImageClip> ClipFilter;
+
+  /
