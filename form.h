@@ -45,4 +45,4 @@ protected:
 
   // Internal
   vtkSmartPointer<vtkImageActor> MaskActor;
-  vtkSma
+  vtkSmartPointer<vtkImageData> AlphaM
