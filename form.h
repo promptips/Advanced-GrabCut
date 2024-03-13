@@ -46,4 +46,6 @@ protected:
   // Internal
   vtkSmartPointer<vtkImageActor> MaskActor;
   vtkSmartPointer<vtkImageData> AlphaMask;
-  vtkSmartPointer<vtkBorderWidget> BorderWidge
+  vtkSmartPointer<vtkBorderWidget> BorderWidget;
+
+  void CatchWidgetEve
