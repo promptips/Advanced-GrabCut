@@ -48,4 +48,4 @@ protected:
   vtkSmartPointer<vtkImageData> AlphaMask;
   vtkSmartPointer<vtkBorderWidget> BorderWidget;
 
-  void CatchWidgetEve
+  void CatchWidgetEvent(vtkObject* caller, long unsi
