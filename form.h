@@ -55,3 +55,6 @@ protected:
   int BACKGROUNDALPHA;
 
   // Variables
+  int NumberOfModels;
+
+  // S
