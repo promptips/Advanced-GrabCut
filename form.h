@@ -51,4 +51,5 @@ protected:
   void CatchWidgetEvent(vtkObject* caller, long unsigned int eventId, void* callData);
 
   // Constants
-  int 
+  int FOREGROUNDALPHA;
+  int BACKGR
