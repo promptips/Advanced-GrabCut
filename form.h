@@ -52,4 +52,6 @@ protected:
 
   // Constants
   int FOREGROUNDALPHA;
-  int BACKGR
+  int BACKGROUNDALPHA;
+
+  // Variables
