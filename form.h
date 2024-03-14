@@ -57,4 +57,5 @@ protected:
   // Variables
   int NumberOfModels;
 
-  // S
+  // Shouldn't be in class:
+  bool
