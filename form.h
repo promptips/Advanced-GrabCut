@@ -58,4 +58,4 @@ protected:
   int NumberOfModels;
 
   // Shouldn't be in class:
-  bool
+  bool IsNaN(const double a)
