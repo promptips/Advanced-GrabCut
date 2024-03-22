@@ -2,4 +2,6 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
-  <propert
+  <property name="geometry">
+   <rect>
+    
