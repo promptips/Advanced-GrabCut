@@ -10,4 +10,5 @@
     <height>600</height>
    </rect>
   </property>
-  <property name="windo
+  <property name="windowTitle">
+   <string>MainWi
