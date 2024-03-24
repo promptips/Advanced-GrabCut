@@ -11,4 +11,6 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWi
+   <string>MainWindow</string>
+  </property>
+  <widget
