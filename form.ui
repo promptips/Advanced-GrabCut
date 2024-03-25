@@ -14,4 +14,5 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QVTKWidget" name="
+   <widget class="QVTKWidget" name="qvtkWidgetLeft">
+    <property name="
