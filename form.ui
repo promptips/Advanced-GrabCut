@@ -15,4 +15,6 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QVTKWidget" name="qvtkWidgetLeft">
-    <property name="
+    <property name="geometry">
+     <rect>
+      <x>10</x
