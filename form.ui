@@ -23,4 +23,5 @@
       <height>401</height>
      </rect>
     </property>
-   </wi
+   </widget>
+   <widget class="QVTKWidget" name="q
