@@ -24,4 +24,5 @@
      </rect>
     </property>
    </widget>
-   <widget class="QVTKWidget" name="q
+   <widget class="QVTKWidget" name="qvtkWidgetRight">
+    <prope
