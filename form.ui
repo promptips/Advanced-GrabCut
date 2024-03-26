@@ -25,4 +25,5 @@
     </property>
    </widget>
    <widget class="QVTKWidget" name="qvtkWidgetRight">
-    <prope
+    <property name="geometry">
+     <r
