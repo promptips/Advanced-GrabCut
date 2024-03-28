@@ -26,4 +26,6 @@
    </widget>
    <widget class="QVTKWidget" name="qvtkWidgetRight">
     <property name="geometry">
-     <r
+     <rect>
+      <x>440</x>
+      <y>
