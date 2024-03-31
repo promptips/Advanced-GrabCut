@@ -37,4 +37,5 @@
    <widget class="QPushButton" name="btnCut">
     <property name="geometry">
      <rect>
- 
+      <x>250</x>
+      <y>490</y>
