@@ -35,4 +35,6 @@
     </property>
    </widget>
    <widget class="QPushButton" name="btnCut">
-    <proper
+    <property name="geometry">
+     <rect>
+ 
