@@ -48,4 +48,5 @@
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry"
