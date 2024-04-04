@@ -58,4 +58,5 @@
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
-    <property na
+    <property name="title">
+     <string>F
