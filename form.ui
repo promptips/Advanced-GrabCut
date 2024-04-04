@@ -59,4 +59,5 @@
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>F
+     <string>File</string>
+    </property>
