@@ -66,4 +66,5 @@
    <addaction name="menuFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="ac
+  <action name="actionOpen">
+   <property 
