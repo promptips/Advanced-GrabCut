@@ -61,4 +61,6 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionOp
+    <addaction name="actionOpen"/>
+   </widget>
+   <a
