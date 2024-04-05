@@ -63,4 +63,4 @@
     </property>
     <addaction name="actionOpen"/>
    </widget>
-   <a
+   <addaction name="menuFile"/>
