@@ -64,3 +64,5 @@
     <addaction name="actionOpen"/>
    </widget>
    <addaction name="menuFile"/>
+  </widget>
+  <widget class="
