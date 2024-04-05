@@ -65,4 +65,4 @@
    </widget>
    <addaction name="menuFile"/>
   </widget>
-  <widget class="
+  <widget class="QStatusBar" name="statu
