@@ -73,4 +73,6 @@
   </action>
  </widget>
  <customwidgets>
-  <customwidge
+  <customwidget>
+   <class>QVTKWidget</class>
+   <e
