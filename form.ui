@@ -68,4 +68,6 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpen">
    <property name="text">
-    <string>Open
+    <string>Open</string>
+   </property>
+  <
