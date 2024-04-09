@@ -75,4 +75,5 @@
  <customwidgets>
   <customwidget>
    <class>QVTKWidget</class>
-   <e
+   <extends>QWidget</extends>
+   <h
