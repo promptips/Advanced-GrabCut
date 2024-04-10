@@ -99,3 +99,18 @@ void SelectionChangedCallbackFunction ( vtkObject* caller, long unsigned int eve
 /*
 //You could override this, but then you have to reimplement the functionality.
 //Instead, you should use an observer
+
+void vtkInteractorStyleRubberBand2D::OnLeftButtonUp()
+{
+  vtkstd::cout << "LeftButtonUp!" << vtkstd::endl;
+
+  vtkstd::cout << "Start: " << this->StartPosition[0] << " " << this->StartPosition[1] << vtkstd::endl;
+  vtkstd::cout << "End: " << this->EndPosition[0] << " " << this->EndPosition[1] << vtkstd::endl;
+
+  //this->Superclass.OnLeftButtonUp(); //doesn't work
+
+  InvokeEvent(vtkCommand::EndPickEvent);
+  InvokeEvent(vtkCommand::SelectionChangedEvent);
+
+}
+*/
