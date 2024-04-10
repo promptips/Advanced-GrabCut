@@ -76,4 +76,4 @@
   <customwidget>
    <class>QVTKWidget</class>
    <extends>QWidget</extends>
-   <h
+   <header>QVTKWidget.h</header
