@@ -63,3 +63,39 @@ int main(int argc, char* argv[])
   renderWindow->AddRenderer(leftRenderer);
   renderWindow->AddRenderer(rightRenderer);
   renderWindow->SetSize(800,400);
+
+  // Setup 2D interaction style
+  vtkSmartPointer<vtkInteractorStyleRubberBand2D> style =
+    vtkSmartPointer<vtkInteractorStyleRubberBand2D>::New();
+  style->AddObserver(vtkCommand::SelectionChangedEvent,selectionChangedCallback);
+
+  // Setup render window interactor
+  vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =
+    vtkSmartPointer<vtkRenderWindowInteractor>::New();
+  renderWindowInteractor->SetInteractorStyle(style);
+
+  // Render and start interaction
+  renderWindowInteractor->SetRenderWindow(renderWindow);
+  renderWindowInteractor->Initialize();
+
+  renderWindowInteractor->Start();
+
+  return EXIT_SUCCESS;
+}
+
+void SelectionChangedCallbackFunction ( vtkObject* caller, long unsigned int eventId, void* clientData, void* callData )
+{
+  vtkstd::cout << "Selection changed callback" << vtkstd::endl;
+
+  unsigned int* rect = reinterpret_cast<unsigned int*> ( callData );
+  unsigned int pos1X = rect[0];
+  unsigned int pos1Y = rect[1];
+  unsigned int pos2X = rect[2];
+  unsigned int pos2Y = rect[3];
+
+  vtkstd::cout << "Start x: " << pos1X << " Start y: " << pos1Y << " End x: " << pos2X << " End y: " << pos2Y << vtkstd::endl;
+}
+
+/*
+//You could override this, but then you have to reimplement the functionality.
+//Instead, you should use an observer
