@@ -137,3 +137,43 @@ private:
     }
 
   ~vtkMemberFunctionCommand()
+    {
+    }
+
+  ClassT* Object;
+  void (ClassT::*Method)();
+  void (ClassT::*Method2)(
+    vtkObject* caller, unsigned long event, void* calldata);
+
+  vtkMemberFunctionCommand(const vtkMemberFunctionCommand&); // Not implemented
+  void operator=(const vtkMemberFunctionCommand&); // Not implemented
+};
+
+// Description:
+// Convenience function for creating vtkMemberFunctionCommand instances that
+// automatically deduces its arguments.
+//
+// Usage:
+//
+// vtkObject* subject = /* ... */
+// foo* observer = /* ... */
+// vtkCommand* adapter = vtkMakeMemberFunctionCommand(observer, &foo::bar);
+// subject->AddObserver(vtkCommand::AnyEvent, adapter);
+//
+// See Also:
+// vtkMemberFunctionCommand, vtkCallbackCommand
+
+template<class ClassT>
+vtkMemberFunctionCommand<ClassT>* vtkMakeMemberFunctionCommand(
+  ClassT& object, void (ClassT::*method)())
+{
+  vtkMemberFunctionCommand<ClassT>* result = vtkMemberFunctionCommand<ClassT>::New();
+  result->SetCallback(object, method);
+  return result;
+}
+
+template<class ClassT>
+vtkMemberFunctionCommand<ClassT>* vtkMakeMemberFunctionCommand(
+  ClassT& object, void (ClassT::*method)(vtkObject*, unsigned long, void*))
+{
+  vtkMemberFunctionCommand<ClassT>* result = vtkMemberFunctionCommand<ClassT>::New();
