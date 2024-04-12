@@ -57,3 +57,31 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 // vtkCommand* command = vtkMakeMemberFunctionCommand(*observer, &foo::Callback);
 // subject->AddObserver(vtkCommand::AnyEvent, command);
+//
+// There are two types of callback methods that could be defined.
+// \li void Callback() -- which takes no arguments.
+// \li void Callback(vtkObject* caller, unsigned long event, void* calldata) --
+// which is passed the same arguments as vtkCommand::Execute(), thus making it
+// possible to get additional details about the event.
+// .SECTION See Also
+// vtkCallbackCommand
+
+#include "vtkCommand.h"
+
+template<class ClassT>
+class VTK_EXPORT vtkMemberFunctionCommand :
+  public vtkCommand
+{
+  typedef vtkMemberFunctionCommand<ClassT> ThisT;
+
+public:
+  typedef vtkCommand Superclass;
+
+  virtual const char* GetClassNameInternal() const { return "vtkMemberFunctionCommand"; }
+
+  static ThisT* SafeDownCast(vtkObjectBase* o)
+    {
+    return dynamic_cast<ThisT*>(o);
+    }
+
+  static ThisT* New()
