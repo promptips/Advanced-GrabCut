@@ -85,3 +85,34 @@ public:
     }
 
   static ThisT* New()
+    {
+    return new ThisT();
+    }
+
+  void PrintSelf(ostream& os, vtkIndent indent)
+    {
+    vtkCommand::PrintSelf(os, indent);
+    }
+
+  // Description:
+  // Set which class instance and member function will be called when a VTK
+  // event is received.
+  void SetCallback(ClassT& object, void (ClassT::*method)())
+    {
+    this->Object = &object;
+    this->Method = method;
+    }
+
+  void SetCallback(ClassT& object,
+    void (ClassT::*method2)(vtkObject*, unsigned long, void*))
+    {
+    this->Object = &object;
+    this->Method2 = method2;
+    }
+
+  virtual void Execute(vtkObject* caller, unsigned long event, void* calldata)
+    {
+    if (this->Object && this->Method)
+      {
+      (this->Object->*this->Method)();
+      }
