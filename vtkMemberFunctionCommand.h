@@ -116,3 +116,24 @@ public:
       {
       (this->Object->*this->Method)();
       }
+    if (this->Object && this->Method2)
+      {
+      (this->Object->*this->Method2)(caller, event, calldata);
+      }
+    }
+  void Reset()
+    {
+    this->Object = 0;
+    this->Method2 = 0;
+    this->Method = 0;
+    }
+
+private:
+  vtkMemberFunctionCommand()
+    {
+    this->Object = 0;
+    this->Method = 0;
+    this->Method2 = 0;
+    }
+
+  ~vtkMemberFunctionCommand()
