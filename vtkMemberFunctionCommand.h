@@ -177,3 +177,6 @@ vtkMemberFunctionCommand<ClassT>* vtkMakeMemberFunctionCommand(
   ClassT& object, void (ClassT::*method)(vtkObject*, unsigned long, void*))
 {
   vtkMemberFunctionCommand<ClassT>* result = vtkMemberFunctionCommand<ClassT>::New();
+  result->SetCallback(object, method);
+  return result;
+}
