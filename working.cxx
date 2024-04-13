@@ -22,3 +22,37 @@
 class GrabCutInteractorStyle : public vtkInteractorStyleImage
 {
 public:
+  static GrabCutInteractorStyle* New();
+  vtkTypeMacro(GrabCutInteractorStyle, vtkInteractorStyleImage);
+
+protected:
+
+};
+vtkStandardNewMacro(GrabCutInteractorStyle);
+
+class vtkBorderCallback2 : public vtkCommand
+{
+public:
+  vtkBorderCallback2(){}
+
+  static vtkBorderCallback2 *New()
+    {
+    return new vtkBorderCallback2;
+    }
+
+  virtual void Execute(vtkObject *caller, unsigned long, void*)
+    {
+
+    vtkBorderWidget *borderWidget =
+      reinterpret_cast<vtkBorderWidget*>(caller);
+
+    // Get the world coordinates of the two corners of the box
+    vtkCoordinate* lowerLeftCoordinate =
+      static_cast<vtkBorderRepresentation*>
+      (borderWidget->GetRepresentation())->GetPositionCoordinate();
+    double* lowerLeft =
+      lowerLeftCoordinate->GetComputedWorldValue(this->LeftRenderer);
+    std::cout << "Lower left coordinate: "
+              << lowerLeft[0] << ", "
+              << lowerLeft[1] << ", "
+              << lowerLeft[2] << std::endl;
