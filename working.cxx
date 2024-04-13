@@ -92,3 +92,38 @@ public:
 
   void SetLeftRenderer(vtkSmartPointer<vtkRenderer> renderer)
     {this->LeftRenderer = renderer;}
+  void SetImageActor(vtkSmartPointer<vtkImageActor> actor)
+    {this->ImageActor   = actor;}
+  void SetClipFilter(vtkSmartPointer<vtkImageClip> clip)
+    {this->ClipFilter   = clip;}
+
+private:
+  vtkSmartPointer<vtkRenderer>   LeftRenderer;
+  vtkSmartPointer<vtkImageActor> ImageActor;
+  vtkSmartPointer<vtkImageClip>  ClipFilter;
+};
+
+int main(int argc, char* argv[])
+{
+  // Parse input arguments
+  if ( argc != 2 )
+    {
+    std::cerr << "Usage: " << argv[0]
+              << " Filename(.jpg)" << std::endl;
+    return EXIT_FAILURE;
+    }
+
+  std::string inputFilename = argv[1];
+
+  // Read the image
+  vtkSmartPointer<vtkJPEGReader> jPEGReader =
+    vtkSmartPointer<vtkJPEGReader>::New();
+
+  if( !jPEGReader->CanReadFile( inputFilename.c_str() ) )
+    {
+    std::cout << "Error: cannot read " << inputFilename << std::endl;
+    return EXIT_FAILURE;
+    }
+
+  jPEGReader->SetFileName ( inputFilename.c_str() );
+  jPEGReader->Update();
