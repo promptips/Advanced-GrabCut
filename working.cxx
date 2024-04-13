@@ -56,3 +56,39 @@ public:
               << lowerLeft[0] << ", "
               << lowerLeft[1] << ", "
               << lowerLeft[2] << std::endl;
+
+    vtkCoordinate* upperRightCoordinate =
+      static_cast<vtkBorderRepresentation*>
+      (borderWidget->GetRepresentation())->GetPosition2Coordinate();
+    double* upperRight =
+      upperRightCoordinate->GetComputedWorldValue(this->LeftRenderer);
+    std::cout << "Upper right coordinate: "
+              << upperRight[0] << ", "
+              << upperRight[1] << ", "
+              << upperRight[2] << std::endl;
+
+    double* bounds = this->ImageActor->GetBounds();
+    double xmin = bounds[0];
+    double xmax = bounds[1];
+    double ymin = bounds[2];
+    double ymax = bounds[3];
+
+    if( (lowerLeft[0] > xmin) &&
+        (upperRight[0] < xmax) &&
+        (lowerLeft[1] > ymin) &&
+        (upperRight[1] < ymax) )
+      {
+      this->ClipFilter->SetOutputWholeExtent(
+        vtkMath::Round(lowerLeft[0]),
+        vtkMath::Round(upperRight[0]),
+        vtkMath::Round(lowerLeft[1]),
+        vtkMath::Round(upperRight[1]), 0, 1);
+      }
+    else
+      {
+      std::cout << "box is NOT inside image" << std::endl;
+      }
+    }
+
+  void SetLeftRenderer(vtkSmartPointer<vtkRenderer> renderer)
+    {this->LeftRenderer = renderer;}
