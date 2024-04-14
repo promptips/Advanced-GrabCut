@@ -202,3 +202,14 @@ int main(int argc, char* argv[])
     vtkSmartPointer<vtkBorderCallback2>::New();
   borderCallback->SetLeftRenderer(leftRenderer);
   borderCallback->SetImageActor(imageActor);
+  borderCallback->SetClipFilter(imageClip);
+
+  borderWidget->AddObserver(vtkCommand::InteractionEvent,borderCallback);
+
+
+  borderWidget->On();
+  renderWindow->Render();
+  interactor->Start();
+
+  return EXIT_SUCCESS;
+}
