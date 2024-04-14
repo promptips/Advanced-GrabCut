@@ -127,3 +127,43 @@ int main(int argc, char* argv[])
 
   jPEGReader->SetFileName ( inputFilename.c_str() );
   jPEGReader->Update();
+
+  int extent[6];
+  jPEGReader->GetOutput()->GetExtent(extent);
+  //xmin, xmax, ymin, ymax
+  //std::cout << "extent: " << extent[0] << " " << extent[1] << " " <<
+  //extent[2] << " " <<  extent[3] << " " <<  extent[4] << " " <<
+  //extent[5] << std::endl;
+
+  vtkSmartPointer<vtkImageActor> imageActor =
+    vtkSmartPointer<vtkImageActor>::New();
+  imageActor->SetInput(jPEGReader->GetOutput());
+
+  vtkSmartPointer<vtkRenderWindow> renderWindow =
+    vtkSmartPointer<vtkRenderWindow>::New();
+  renderWindow->SetSize(800,400);
+
+  vtkSmartPointer<vtkRenderWindowInteractor> interactor =
+    vtkSmartPointer<vtkRenderWindowInteractor>::New();
+
+  vtkSmartPointer<GrabCutInteractorStyle> style =
+    vtkSmartPointer<GrabCutInteractorStyle>::New();
+  interactor->SetInteractorStyle(style);
+
+  vtkSmartPointer<vtkBorderWidget> borderWidget =
+    vtkSmartPointer<vtkBorderWidget>::New();
+  borderWidget->SetInteractor(interactor);
+  static_cast<vtkBorderRepresentation*>
+    (borderWidget->GetRepresentation())->GetBorderProperty()->SetColor(0,1,0);
+  static_cast<vtkBorderRepresentation*>
+    (borderWidget->GetRepresentation())->SetPosition(0.4,0.4);
+  static_cast<vtkBorderRepresentation*>
+    (borderWidget->GetRepresentation())->SetPosition2(0.2,0.2);
+  borderWidget->SelectableOff();
+
+  interactor->SetRenderWindow(renderWindow);
+
+
+  // Define viewport ranges in normalized coordinates
+  // (xmin, ymin, xmax, ymax)
+  double leftViewport[4] = {0.0, 0.0, 0.5, 1.0};
