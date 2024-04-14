@@ -167,3 +167,38 @@ int main(int argc, char* argv[])
   // Define viewport ranges in normalized coordinates
   // (xmin, ymin, xmax, ymax)
   double leftViewport[4] = {0.0, 0.0, 0.5, 1.0};
+  double rightViewport[4] = {0.5, 0.0, 1.0, 1.0};
+
+  // Setup both renderers
+  vtkSmartPointer<vtkRenderer> leftRenderer =
+    vtkSmartPointer<vtkRenderer>::New();
+  leftRenderer->SetBackground(1,0,0);
+  renderWindow->AddRenderer(leftRenderer);
+  leftRenderer->SetViewport(leftViewport);
+
+  vtkSmartPointer<vtkRenderer> rightRenderer =
+    vtkSmartPointer<vtkRenderer>::New();
+  renderWindow->AddRenderer(rightRenderer);
+  rightRenderer->SetViewport(rightViewport);
+
+  leftRenderer->AddActor(imageActor);
+
+  leftRenderer->ResetCamera();
+  rightRenderer->ResetCamera();
+
+  vtkSmartPointer<vtkImageClip> imageClip =
+    vtkSmartPointer<vtkImageClip>::New();
+  imageClip->SetInputConnection(jPEGReader->GetOutputPort());
+  imageClip->SetOutputWholeExtent(jPEGReader->GetOutput()->GetWholeExtent());
+  imageClip->ClipDataOn();
+
+  vtkSmartPointer<vtkImageActor> clipActor =
+    vtkSmartPointer<vtkImageActor>::New();
+  clipActor->SetInput(imageClip->GetOutput());
+
+  rightRenderer->AddActor(clipActor);
+
+  vtkSmartPointer<vtkBorderCallback2> borderCallback =
+    vtkSmartPointer<vtkBorderCallback2>::New();
+  borderCallback->SetLeftRenderer(leftRenderer);
+  borderCallback->SetImageActor(imageActor);
